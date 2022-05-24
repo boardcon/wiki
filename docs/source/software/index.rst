@@ -3,7 +3,9 @@ Software
 
 .. toctree::
 
-   Android9
+   Install-Tools
+   Install-ubuntu
+   Android
    Ubuntu
    Buildroot
    
