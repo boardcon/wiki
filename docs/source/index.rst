@@ -1,4 +1,4 @@
-EM3288 User manual
+EM3288 user manual
 =====================================
 
 .. toctree::
