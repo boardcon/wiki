@@ -1,9 +1,9 @@
-计算机体系结构笔记
+EM3288 User manual
 =====================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
    preface
-   chapter1/index
+   Hardware/index
