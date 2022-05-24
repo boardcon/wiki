@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Computer_Architecture_Notebook'
-copyright = '2022, kkqq'
-author = 'kkqq'
+project = 'EM3288 User Manual'
+copyright = '2022, Boardcon'
+author = 'Boardcon'
 
 release = '1.0'
 version = '1.0.0'
