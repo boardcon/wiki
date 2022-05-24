@@ -5,7 +5,7 @@ Software
 
    Install-Tools
    install-ubuntu
-   android9
+   android
    ubuntu
    buildroot
    
