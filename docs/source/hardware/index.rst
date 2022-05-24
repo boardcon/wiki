@@ -1,9 +1,10 @@
-EM3288 hardware
+Hardware
 ================
 
 
 .. toctree::
+  :caption: Hardware
 
-   EM3288 Introduction
-   Peripherals Introduction
-   Product Configurations
+   Introduction
+   Peripherals
+   Configurations
