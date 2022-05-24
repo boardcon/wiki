@@ -6,5 +6,5 @@ EM3288 user manual
    :caption: Contents
 
    preface
-   Hardware/index
-   Software/index
+   hardware/index
+   software/index
