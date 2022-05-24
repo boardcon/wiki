@@ -13,10 +13,8 @@ EM3288 user manual
 
    hardware/index
    
-Software
-=========
-
 .. toctree::
    :maxdepth: 2
+   :Name: Software
  
    software/index
