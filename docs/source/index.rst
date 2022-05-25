@@ -23,4 +23,6 @@ EM3288 user manual
 
 .. toctree::
    :maxdepth: 2
-   :caption: android
+   :caption: `Android`
+   
+   android
