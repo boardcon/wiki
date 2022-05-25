@@ -1,1 +1,1 @@
-My computer architecture notes and summary.
+EM3566 user manual
