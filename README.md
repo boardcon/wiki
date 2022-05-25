@@ -1,1 +1,1 @@
-My computer architecture notes and summary.
+Boardcon user manual
