@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'SBC User Manual'
+project = 'EM3566 User Manual'
 copyright = '2022, Boardcon Embedded Design'
 author = 'Boardcon'
 
