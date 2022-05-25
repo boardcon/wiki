@@ -21,6 +21,3 @@ EM3288 user manual
    install-tools
    environment
    android
-   debian
-   ubuntu
-   buildroot
