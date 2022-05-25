@@ -32,7 +32,7 @@ Path :file:`Release_DriverAssitant/DriverInstall.exe`
 
 After the installation is complete,connect the board and PC with Micro USB cable (USB powered), in *Computer Management* can see the following information:
 
-.. figure:: ./image/EM3288_Android9_16.png
+.. figure:: ./image/EM3288_Android9_16.jpg
    :alt: serial port path
 
 3 Install Serial Terminal Tool
