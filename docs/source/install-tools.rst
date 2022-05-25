@@ -1,7 +1,7 @@
-Install Debug Tools
+1 Install Debug Tools
 ====================
 
-1 Install CP2102 Driver  
+1.1 Install CP2102 Driver  
 -----------------------
 
 Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click **preInstaller.exe** to install
@@ -17,7 +17,7 @@ Now the device will be listed under *Device Manager -> PORTS* with unique serial
 .. figure:: ./image/EM3288_Android9_13.png
    :alt: serial port path
 
-2 Install Rockchip Driver Assistant
+1.2 Install Rockchip Driver Assistant
 -------------------------------------
 
 Path :file:`Release_DriverAssitant/DriverInstall.exe`
@@ -35,7 +35,7 @@ After the installation is complete,connect the board and PC with Micro USB cable
 .. figure:: ./image/EM3288_Android9_16.jpg
    :alt: serial port path
 
-3 Install Serial Terminal Tool
+1.3 Install Serial Terminal Tool
 -------------------------------
 
 The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
