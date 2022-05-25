@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'EM3288 User Manual'
+project = 'User Manual'
 copyright = '2022, Boardcon Embedded Design'
 author = 'Boardcon'
 
