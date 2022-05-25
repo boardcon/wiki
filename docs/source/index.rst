@@ -11,10 +11,17 @@ EM3288 user manual
    :maxdepth: 2
    :caption: Hardware
 
-   hardware/index
+   introduction
+   peripherals
+   configuration
    
 .. toctree::
    :maxdepth: 2
-   :Name: Software
+   :caption: Software
  
-   software/index
+   install-tools
+   environment
+   android
+   debian
+   ubuntu
+   buildroot
