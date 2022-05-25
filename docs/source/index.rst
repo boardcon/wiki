@@ -20,4 +20,7 @@ EM3288 user manual
  
    install-tools
    environment
-   android
+
+.. toctree::
+   :maxdepth: 2
+   :caption: android
