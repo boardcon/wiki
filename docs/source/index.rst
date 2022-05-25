@@ -1,4 +1,4 @@
-EM3288 user manual
+SBC user manual
 ====================
 
 .. toctree::
