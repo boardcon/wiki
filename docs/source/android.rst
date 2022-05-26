@@ -1,88 +1,79 @@
 Android9
 =========
 
-3 Compile Source 
-================
+1 Compile Source 
+-----------------
 
-*Step 1,* unzip the source.
+Step 1, unzip the source.
 
-# tar zxvf EM3288_android_9.0.tar.bz2
+.. code-block::
 
-*Step 2,* compile uboot
+  tar zxvf EM3288_android_9.0.tar.bz2
 
-# cd sdk-9.0/uboot
+Step 2, compile uboot
 
-# make clean
+.. code-block::
 
-# make mrproper
+   cd sdk-9.0/uboot
+   make clean
+   make mrproper
+   ./make.sh rk3288
 
-# ./make.sh rk3288
+Step 3, compile the kernel
 
-*Step 3,* compile the kernel
+.. code-block::
 
-# cd sdk-9.0/kernel
-
-# make ARCH=arm rockchip_defconfig
-
-# make ARCH=arm rk3288-evb-android-act8846-lvds-avb.img -j8
+   cd sdk-9.0/kernel
+   make ARCH=arm rockchip_defconfig
+   make ARCH=arm rk3288-evb-android-act8846-lvds-avb.img -j8
 
 **kernel.img,** **resource.img** and **boot.img** are generated in
 current directory.
 
-*Step 4,* compile the android
+Step 4, compile the android
 
-# cd sdk-9.0
+.. code-block::
 
-# source build/envsetup.sh
+   cd sdk-9.0
+   source build/envsetup.sh
+   lunch                      # Choose rk3288-userdebug
+   make -j8
 
-# lunch
+Step 5, Generated image file
 
-Choose rk3288-userdebug
+.. code-block::
 
-# make -j8
-
-*Step 5,* Generated image file
-
-# ./mkimage.sh
-
-# cd rockdev/Image-rk3288
-
-# ls
+   ./mkimage.sh
+   cd rockdev/Image-rk3288
+   ls
 
 Images are generated in current directory.
 
-4 Images Operation
-==================
+2 Images Operation
+-----------------
 
-4.1 Pack Image
---------------
+2.1 Pack Image
+^^^^^^^^^^^^^^
 
-*Step 1,* copy all the files in Android directory **rockdev/Image** to
-the windows **AndroidTool_Release_v2.65/rockdev/Image**
+Step 1, copy all the files in Android directory :file:`rockdev/Image` to
+the windows :file:`AndroidTool_Release_v2.65/rockdev/Imag`
 
-*Step 2,* enter **AndroidTool_Release_v2.65/rockdev/**, double-click to
+Step 2, enter :file:`AndroidTool_Release_v2.65/rockdev/`, double-click to
 run **mkupdate.bat.**
 
-*Step 3,* the **update.img** will be generated in **rockdev** directory.
+Step 3, the **update.img** will be generated in **rockdev** directory.
 
-.. image:: media/image3.png
-   :width: 5.77153in
-   :height: 1.99792in
+.. image:: image/EM3288_Android9_1.png
 
-.. image:: media/image4.png
-   :width: 5.77014in
-   :height: 3.77778in
+.. image:: ./image/EM3288_Android9_2.png
 
-.. image:: media/image5.png
-   :width: 5.77014in
-   :height: 3.77778in
+.. image:: image/EM3288_Android9_3.png
 
-.. image:: media/image6.png
-   :width: 5.6875in
-   :height: 2.95833in
+.. image:: image/EM3288_Android9_4.png
 
-4.2 Unzip Firmware
-------------------
+
+2.2 Unzip Firmware
+^^^^^^^^^^^^^^^^^^^
 
 Unzip Firmware in ubuntu.
 
