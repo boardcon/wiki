@@ -99,7 +99,7 @@ The unzip files will be generated in **output** directory.
 
 .. raw:: html
 
-    <strong><font color="red"> Windows </font></strong>
+    <strong><font color="blue"> Windows </font></strong>
 
 
 Step 1, copy **update.img** to the windows directory :file:`AndroidTool_Release_v2.65/rockdev/`
