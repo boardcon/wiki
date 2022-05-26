@@ -1,7 +1,7 @@
-2 Compiler Environment
+Compiler Environment
 ======================
 
-2.1 Vmware10.0+ubuntu16.04
+1 Vmware10.0+ubuntu16.04
 --------------------------
 
 Install Vmware10.0 in windows OS, and then install ubuntu16.04 in VMware
@@ -12,7 +12,7 @@ download and install ubuntu operating system.
 
  Android9 should be complied by ubuntu 64bit OS.
 
-2.2 Install OpenJDK1.8
+2 Install OpenJDK1.8
 ----------------------
 
 .. code-block::
@@ -37,7 +37,7 @@ Check JDK version
 
    java -version
 
-2.3 Install Tools
+3 Install Tools
 -----------------
 
 - PC OS: ubuntu system
