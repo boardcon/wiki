@@ -27,8 +27,7 @@ Step 3, compile the kernel
    make ARCH=arm rockchip_defconfig
    make ARCH=arm rk3288-evb-android-act8846-lvds-avb.img -j8
 
-**kernel.img,** **resource.img** and **boot.img** are generated in
-current directory.
+**kernel.img**, **resource.img** and **boot.img** are generated in current directory.
 
 Step 4, compile the android
 
@@ -55,11 +54,9 @@ Images are generated in current directory.
 2.1 Pack Image
 ^^^^^^^^^^^^^^
 
-Step 1, copy all the files in Android directory :file:`rockdev/Image` to
-the windows :file:`AndroidTool_Release_v2.65/rockdev/Imag`
+Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows :file:`AndroidTool_Release_v2.65/rockdev/Imag`
 
-Step 2, enter :file:`AndroidTool_Release_v2.65/rockdev/`, double-click to
-run **mkupdate.bat.**
+Step 2, enter :file:`AndroidTool_Release_v2.65/rockdev/`, double-click to run **mkupdate.bat.**
 
 Step 3, the **update.img** will be generated in **rockdev** directory.
 
@@ -71,73 +68,53 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
 
 .. image:: image/EM3288_Android9_4.png
 
-
 2.2 Unzip Firmware
 ^^^^^^^^^^^^^^^^^^^
 
 Unzip Firmware in ubuntu.
 
-*Step 1*, copy **update.img** to the android source directory
-**RKTools/linux/Linux_Pack_Firmware/rockdev/**
+Step 1, copy **update.img** to the android source directory :file:`RKTools/linux/Linux_Pack_Firmware/rockdev/`
 
-*Step 2*, execute the following command
+Step 2, execute the following command
 
-# cd RKTools/linux/Linux_Pack_Firmware/rockdev/
+.. code-block::
 
-# chmod 777 unpack.sh
+   cd RKTools/linux/Linux_Pack_Firmware/rockdev/
+   chmod 777 unpack.sh
+   ./unpack.sh
+   ls output/
+   ls output/Image/
 
-# ./unpack.sh
-
-# ls output/
-
-# ls output/Image/
-
-.. image:: media/image7.png
-   :alt: aaaa_WPS图片
-   :width: 5.51875in
-   :height: 4.26944in
+.. image:: image/EM3288_Android9_5.png
 
 The unzip files will be generated in **output** directory.
 
-.. image:: media/image8.png
-   :alt: bbbb_WPS图片
-   :width: 5.575in
-   :height: 1.58819in
+.. image:: image/EM3288_Android9_6.png
 
 Unzip Firmware in windows.
 
-*Step 1*, copy **update.img** to the windows directory
-**AndroidTool_Release_v2.65/rockdev/**
+Step 1, copy **update.img** to the windows directory :file:`AndroidTool_Release_v2.65/rockdev/`
 
-*Step 2*, open Command Prompt then execute the following command in CMD
+Step 2, open Command Prompt then execute the following command in CMD
 
-# RKImageMaker.exe -unpack ./update.img ./
+.. code-block::
 
-.. image:: media/image9.png
-   :width: 5.77014in
-   :height: 2.25972in
+  RKImageMaker.exe -unpack ./update.img ./
+
+.. image:: image/EM3288_Android9_7.png
 
 After unzip the file to get boot.bin and firmware.img
 
-.. image:: media/image10.png
-   :width: 5.70833in
-   :height: 3.3125in
+.. image:: image/EM3288_Android9_8.png
 
-*Step 3*, execute the following command in CMD to unzip **firmware.img**
+Step 3, execute the following command in CMD to unzip **firmware.img**
 
-# AFPTool.exe -unpack firmware.img ./
+.. code-block::
 
-.. image:: media/image11.png
-   :width: 5.77014in
-   :height: 4.05347in
+   AFPTool.exe -unpack firmware.img ./
 
-The unzip files will be generated in
-**AndroidTool_Release_v2.65\rockdev\Image**
+.. image:: image/EM3288_Android9_9.png
 
-directory
+The unzip files will be generated in :file:`AndroidTool_Release_v2.65\rockdev\Image`
 
-.. image:: media/image12.png
-   :width: 5.21875in
-   :height: 3.27083in
-
-.. _install-tools-1:
+.. image:: image/EM3288_Android9_10.png
