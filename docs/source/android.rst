@@ -73,9 +73,10 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
 
 For alternative ways to Unzip Firmwarec, see below for your operating system.
 
+for
 .. raw:: html
 
-    <strong><font color="red"> Ubuntu </font></strong>
+    <strong><font color="blue"> Ubuntu OS</font></strong>
     
 
 Step 1, copy **update.img** to the android source directory :file:`RKTools/linux/Linux_Pack_Firmware/rockdev/`
@@ -96,10 +97,10 @@ The unzip files will be generated in **output** directory.
 
 .. image:: image/EM3288_Android9_6.png
 
-
+for
 .. raw:: html
 
-    <strong><font color="blue"> Windows </font></strong>
+    <strong><font color="blue"> Windows OS </font></strong>
 
 
 Step 1, copy **update.img** to the windows directory :file:`AndroidTool_Release_v2.65/rockdev/`
