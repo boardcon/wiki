@@ -23,19 +23,19 @@ EM3288 user manual
  
 .. toctree::
    :maxdepth: 2
-   :caption: android
+   :caption: Android
    
    android
    
 .. toctree::
    :maxdepth: 2
-   :caption: ubuntu
+   :caption: Ubuntu
    
    ubuntu
    
 .. toctree::
    :maxdepth: 2
-   :caption: buildroot
+   :caption: Buildroot
    
    buildroot
      
