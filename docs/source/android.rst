@@ -128,3 +128,227 @@ Step 3, execute the following command in CMD to unzip **firmware.img**
 The unzip files will be generated in :file:`AndroidTool_Release_v2.65\rockdev\Image`
 
 .. image:: image/EM3288_Android9_10.png
+
+3 Burn Images
+-------------
+
+Step 1, unzip **AndroidTool_Release_v2.65** on Windows.
+
+Step 2, open :file:`AndroidTool_Release_v2.65\AndroidTool.exe`
+
+.. image:: image/EM3288_Android9_21.png
+
+Step 3, keep pressing the **Recover Key,** then connect PC and development board with Micro USB cable until the windows PC shows
+**Found one LOADER Device**
+
+The USB power supply is only available for programming, and the current
+is not enough for the board to run.
+
+.. image:: image/EM3288_Android9_22.jpg
+.. image:: image/EM3288_Android9_23.png
+
+Step 4, click *Upgrade Firmware  ->  Firmware*, select
+**update.img**. Click *Upgrade* to flash.
+
+.. image:: image/EM3288_Android9_24.png
+
+
+Download complete.
+
+.. image:: image/EM3288_Android9_25.png
+
+User can also update the firmware separately.
+
+*Step 1*, Click the column on the right side for the path of the file
+want to flash.
+
+*Step 2*, Select the checkbox on the left.
+
+*Step 3*, Click “run” to flash the image.
+
+.. image:: image/EM3288_Android9_26.png
+
+4 Android Application
+----------------------
+
+4.1 HDMI Display
+^^^^^^^^^^^^^^^^^
+
+Connect the board and monitor with a HDMI cable, then start up.
+
+.. image:: image/EM3288_Android9_27.png
+
+4.2 SD Card
+^^^^^^^^^^^^^^^^^
+
+EM3288 supports SD Hot-plug.
+
+.. image:: image/EM3288_Android9_28.png
+
+.. image:: image/EM3288_Android9_29.png
+
+
+4.3 USB Host
+^^^^^^^^^^^^^^^^^
+
+The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or
+other USB devices.
+
+.. image:: image/EM3288_Android9_30.png
+
+4.4 Video Player
+^^^^^^^^^^^^^^^^^
+
+Open **Video** and select file to play.
+
+.. image:: image/EM3288_Android9_31.png
+
+.. image:: image/EM3288_Android9_32.png
+
+4.5 Ethernet
+^^^^^^^^^^^^^^^^^
+
+Connect the Board and router with an Ethernet cable (default DHCP=Yes).
+User can ping URL/IP at terminal, or open the browser to test Network.
+
+# su
+
+# ping `www.boardcon.com <http://www.baidu.com>`__
+
+.. image:: image/EM3288_Android9_33.png
+
+.. image:: image/EM3288_Android9_34.png
+
+.. image:: image/EM3288_Android9_35.png
+
+4.6 Record
+^^^^^^^^^^^^^^^^^
+
+*Step 1*, open the APP Recorder in Android.
+
+*Step 2*, click on the APP to start recording, speech in front of the
+microphone then can record.
+
+Note: Default microphone recording, if inserted the headset will switch
+to the headset recording automatically.
+
+.. image:: image/EM3288_Android9_36.png
+
+.. image:: image/EM3288_Android9_37.png
+
+.. image:: image/EM3288_Android9_38.png
+
+After finish recording, click **stop** menu and select **Save** to store
+file.
+
+The default storage path is
+
+**Internal Memory/Records**
+
+.. image:: image/EM3288_Android9_39.png
+
+4.7 RTC
+^^^^^^^^
+
+Execute the command **hwclock** at CRT terminal
+
+# hwclock
+
+Wait a minute then run **hwclock** again, it can be seen the time has
+changed.
+
+.. image:: image/EM3288_Android9_40.png
+
+4.8 WiFi
+^^^^^^^^^^^^^^^^^
+
+Connect the WiFi antenna, then click **Settings -> Network&internet ->
+WiFi -> turn on**, select the SSID from the list of available networks
+and enter the password.
+
+After connected, user can open the browser to browse the web.
+
+.. image:: image/EM3288_Android9_41.png
+
+.. image:: image/EM3288_Android9_42.png
+
+.. image:: image/EM3288_Android9_43.png
+
+4.9 Bluetooth
+^^^^^^^^^^^^^^^^^
+
+Click **Settings -> Connected devices(Bluetooth) -> Connection
+preferences -> Bluetooth -> turn on**
+
+Select the available device in the list to pair.
+
+.. image:: image/EM3288_Android9_44.png
+
+.. image:: image/EM3288_Android9_45.png
+
+After pairing, devices can connect with each other automatically
+
+4.10 4G Network
+^^^^^^^^^^^^^^^^^
+
+*Step 1*, Insert 4G module to PCI-E slot (4G model:EC20).
+
+*Step 2*, Connect antenna and insert SIM card.
+
+*Step 3*, The default connection is 4G network after power on.
+
+4G network settings:
+
+**Settings -> Networks & internet -> Mobile network -> Preferred network
+type -> 4G**
+
+.. image:: image/EM3288_Android9_46.png
+
+.. image:: image/EM3288_Android9_447.png
+
+.. image:: image/EM3288_Android9_48.png
+
+.. image:: image/EM3288_Android9_49.png
+
+.. image:: media/image54.png
+
+4.11 GPS
+^^^^^^^^^^^^^^^^^
+
+Connect GPS antenna, then power on and install the APP
+**GPS_test1.2.4.apk** (*path: CD/Tools/)*
+
+.. image:: image/EM3288_Android9_50.png
+
+.. image:: image/EM3288_Android9_51.png
+
+.. image:: image/EM3288_Android9_52.png
+
+4.12 Camera
+^^^^^^^^^^^^^^^^^
+
+Connect the camera module (OV13850) to the development board **before
+power on**\ ，then click the camera app to test.
+
+.. image:: image/EM3288_Android9_53.png
+
+.. image:: image/EM3288_Android9_54.png
+
+4.13 SATA
+^^^^^^^^^^^^^^^^^
+
+EM3288 not support sata Hot-plug. Connect the sata module to the
+development board **before power on**，then the sata will auto mount.
+
+.. image:: image/EM3288_Android9_55.png
+
+.. image:: image/EM3288_Android9_56.png
+
+.. image:: image/EM3288_Android9_57.png
+
+.. image:: image/EM3288_Android9_58.png
+
+The current supplied by the development board is not enough to maintain
+the stable operation of SATA, it is recommended to provide an external
+power supply for SATA.
+
