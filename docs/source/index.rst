@@ -17,7 +17,25 @@ EM3288 user manual
 .. toctree::
    :maxdepth: 2
    :caption: Software
- 
+   
    install-tools
    environment
+ 
+.. toctree::
+   :maxdepth: 2
+   :caption: android
+   
    android
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: ubuntu
+   
+   ubuntu
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: buildroot
+   
+   buildroot
+     
