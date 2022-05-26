@@ -77,6 +77,7 @@ For alternative ways to Unzip Firmwarec, see below for your operating system.
 
     <strong><font color="red"> Ubuntu </font></strong>
     
+
 Step 1, copy **update.img** to the android source directory :file:`RKTools/linux/Linux_Pack_Firmware/rockdev/`
 
 Step 2, execute the following command
@@ -98,6 +99,7 @@ The unzip files will be generated in **output** directory.
 .. raw:: html
 
     <strong><font color="red"> Windows </font></strong>
+
 
 Step 1, copy **update.img** to the windows directory :file:`AndroidTool_Release_v2.65/rockdev/`
 
