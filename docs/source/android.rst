@@ -73,7 +73,9 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
 
 For alternative ways to Unzip Firmwarec, see below for your operating system.
 
-.. centered:: Ubuntu
+.. raw:: html
+
+    <font color="blue"> Ubuntu </font>
 
 Step 1, copy **update.img** to the android source directory :file:`RKTools/linux/Linux_Pack_Firmware/rockdev/`
 
