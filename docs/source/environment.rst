@@ -1,7 +1,7 @@
 Compiler Environment
 ======================
 
-1 Vmware10.0+ubuntu16.04
+1 Vmware10.0 + ubuntu16.04
 --------------------------
 
 Install Vmware10.0 in windows OS, and then install ubuntu16.04 in VMware
