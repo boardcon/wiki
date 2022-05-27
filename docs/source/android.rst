@@ -73,10 +73,9 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
 
 For alternative ways to Unzip Firmwarec, see below for your operating system.
 
-for
 .. raw:: html
 
-    <strong><font color="blue"> Ubuntu OS</font></strong>
+    <strong><font color="blue"> for Ubuntu OS</font></strong>
     
 
 Step 1, copy **update.img** to the android source directory :file:`RKTools/linux/Linux_Pack_Firmware/rockdev/`
@@ -97,11 +96,9 @@ The unzip files will be generated in **output** directory.
 
 .. image:: image/EM3288_Android9_6.png
 
-for
 .. raw:: html
 
-    <strong><font color="blue"> Windows OS </font></strong>
-
+    <strong><font color="blue"> for Windows OS </font></strong>
 
 Step 1, copy **update.img** to the windows directory :file:`AndroidTool_Release_v2.65/rockdev/`
 
@@ -152,19 +149,18 @@ Step 4, click *Upgrade Firmware  ->  Firmware*, select
 
 .. image:: image/EM3288_Android9_24.png
 
-
 Download complete.
 
 .. image:: image/EM3288_Android9_25.png
 
 User can also update the firmware separately.
 
-*Step 1*, Click the column on the right side for the path of the file
+Step 1, Click the column on the right side for the path of the file
 want to flash.
 
-*Step 2*, Select the checkbox on the left.
+Step 2, Select the checkbox on the left.
 
-*Step 3*, Click “run” to flash the image.
+Step 3, Click *run* to flash the image.
 
 .. image:: image/EM3288_Android9_26.png
 
@@ -176,16 +172,16 @@ want to flash.
 
 Connect the board and monitor with a HDMI cable, then start up.
 
-.. image:: image/EM3288_Android9_27.png
+.. image:: image/EM3288_Android9_27.jpg
 
 4.2 SD Card
 ^^^^^^^^^^^^^^^^^
 
 EM3288 supports SD Hot-plug.
 
-.. image:: image/EM3288_Android9_28.png
+.. image:: image/EM3288_Android9_28.jpg
 
-.. image:: image/EM3288_Android9_29.png
+.. image:: image/EM3288_Android9_29.gif
 
 
 4.3 USB Host
@@ -194,16 +190,16 @@ EM3288 supports SD Hot-plug.
 The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or
 other USB devices.
 
-.. image:: image/EM3288_Android9_30.png
+.. image:: image/EM3288_Android9_30.gif
 
 4.4 Video Player
 ^^^^^^^^^^^^^^^^^
 
 Open **Video** and select file to play.
 
-.. image:: image/EM3288_Android9_31.png
+.. image:: image/EM3288_Android9_31.jpg
 
-.. image:: image/EM3288_Android9_32.png
+.. image:: image/EM3288_Android9_32.jpg
 
 4.5 Ethernet
 ^^^^^^^^^^^^^^^^^
@@ -217,9 +213,9 @@ User can ping URL/IP at terminal, or open the browser to test Network.
 
 .. image:: image/EM3288_Android9_33.png
 
-.. image:: image/EM3288_Android9_34.png
+.. image:: image/EM3288_Android9_34.jpg
 
-.. image:: image/EM3288_Android9_35.png
+.. image:: image/EM3288_Android9_35.jpg
 
 4.6 Record
 ^^^^^^^^^^^^^^^^^
@@ -232,11 +228,11 @@ microphone then can record.
 Note: Default microphone recording, if inserted the headset will switch
 to the headset recording automatically.
 
-.. image:: image/EM3288_Android9_36.png
+.. image:: image/EM3288_Android9_36.jpg
 
-.. image:: image/EM3288_Android9_37.png
+.. image:: image/EM3288_Android9_37.jpg
 
-.. image:: image/EM3288_Android9_38.png
+.. image:: image/EM3288_Android9_38.jpg
 
 After finish recording, click **stop** menu and select **Save** to store
 file.
@@ -245,7 +241,7 @@ The default storage path is
 
 **Internal Memory/Records**
 
-.. image:: image/EM3288_Android9_39.png
+.. image:: image/EM3288_Android9_39.jpg
 
 4.7 RTC
 ^^^^^^^^
@@ -268,11 +264,11 @@ and enter the password.
 
 After connected, user can open the browser to browse the web.
 
-.. image:: image/EM3288_Android9_41.png
+.. image:: image/EM3288_Android9_41.jpg
 
-.. image:: image/EM3288_Android9_42.png
+.. image:: image/EM3288_Android9_42.jpg
 
-.. image:: image/EM3288_Android9_43.png
+.. image:: image/EM3288_Android9_43.jpg
 
 4.9 Bluetooth
 ^^^^^^^^^^^^^^^^^
@@ -282,9 +278,9 @@ preferences -> Bluetooth -> turn on**
 
 Select the available device in the list to pair.
 
-.. image:: image/EM3288_Android9_44.png
+.. image:: image/EM3288_Android9_44.jpg
 
-.. image:: image/EM3288_Android9_45.png
+.. image:: image/EM3288_Android9_45.jpg
 
 After pairing, devices can connect with each other automatically
 
@@ -302,13 +298,13 @@ After pairing, devices can connect with each other automatically
 **Settings -> Networks & internet -> Mobile network -> Preferred network
 type -> 4G**
 
-.. image:: image/EM3288_Android9_46.png
+.. image:: image/EM3288_Android9_46.jpg
 
-.. image:: image/EM3288_Android9_447.png
+.. image:: image/EM3288_Android9_447.jpg
 
-.. image:: image/EM3288_Android9_48.png
+.. image:: image/EM3288_Android9_48.jpg
 
-.. image:: image/EM3288_Android9_49.png
+.. image:: image/EM3288_Android9_49.jpg
 
 .. image:: media/image54.png
 
