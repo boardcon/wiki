@@ -200,8 +200,7 @@ Step 2, open :file:`AndroidTool_Release_v2.65\AndroidTool.exe`
 Step 3, keep pressing the **Recover Key,** then connect PC and development board with Micro USB cable until the windows PC shows
 **Found one LOADER Device**
 
-The USB power supply is only available for programming, and the current
-is not enough for the board to run.
+The USB power supply is only available for programming, and the current is not enough for the board to run.
 
 .. image:: image/EM3288_Android9_22.jpg
 .. image:: image/EM3288_Android9_23.png
@@ -217,12 +216,11 @@ Download complete.
 
 User can also update the firmware separately.
 
-Step 1, Click the column on the right side for the path of the file
-want to flash.
+Step 1, Click the column on the right side for the path of the file want to flash.
 
 Step 2, Select the checkbox on the left.
 
-Step 3, Click *run* to flash the image.
+Step 3, Click *Run* to flash the image.
 
 .. image:: image/EM3288_Android9_26.png
 
@@ -249,8 +247,7 @@ EM3288 supports SD Hot-plug.
 5.3 USB Host
 ^^^^^^^^^^^^^^^^^
 
-The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or
-other USB devices.
+The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices.
 
 .. image:: image/EM3288_Android9_30.gif
 
@@ -266,12 +263,11 @@ Open **Video** and select file to play.
 5.5 Ethernet
 ^^^^^^^^^^^^^^^^^
 
-Connect the Board and router with an Ethernet cable (default DHCP=Yes).
-User can ping URL/IP at terminal, or open the browser to test Network.
+Connect the Board and router with an Ethernet cable (default DHCP=Yes). User can ping URL/IP at terminal, or open the browser to test Network.
 
-# su
-
-# ping `www.boardcon.com <http://www.baidu.com>`__
+.. code-block::
+   su
+   ping www.boardcon.com
 
 .. image:: image/EM3288_Android9_33.png
 
@@ -280,15 +276,15 @@ User can ping URL/IP at terminal, or open the browser to test Network.
 .. image:: image/EM3288_Android9_35.jpg
 
 5.6 Record
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
-*Step 1*, open the APP Recorder in Android.
+Step 1, open the APP Recorder in Android.
 
-*Step 2*, click on the APP to start recording, speech in front of the
-microphone then can record.
+Step 2, click on the APP to start recording, speech in front of the microphone then can record.
 
-Note: Default microphone recording, if inserted the headset will switch
-to the headset recording automatically.
+.. Note::
+ 
+  Default microphone recording. It will switch to the headset recording automatically if inserted the headset .
 
 .. image:: image/EM3288_Android9_36.jpg
 
@@ -296,12 +292,9 @@ to the headset recording automatically.
 
 .. image:: image/EM3288_Android9_38.jpg
 
-After finish recording, click **stop** menu and select **Save** to store
-file.
+After finish recording, click *Stop* menu and select **Save** to store file.
 
-The default storage path is
-
-**Internal Memory/Records**
+The default storage path is :file:`Internal Memory/Records`
 
 .. image:: image/EM3288_Android9_39.jpg
 
@@ -310,19 +303,18 @@ The default storage path is
 
 Execute the command **hwclock** at CRT terminal
 
-# hwclock
+.. code-block::
 
-Wait a minute then run **hwclock** again, it can be seen the time has
-changed.
+  hwclock
+
+Wait a moment then run **hwclock** again, it can be seen the time has changed.
 
 .. image:: image/EM3288_Android9_40.png
 
 5.8 WiFi
 ^^^^^^^^^^^^^^^^^
 
-Connect the WiFi antenna, then click **Settings -> Network&internet ->
-WiFi -> turn on**, select the SSID from the list of available networks
-and enter the password.
+Connect the WiFi antenna, then click *Settings -> Network&internet -> WiFi -> turn on*, select the SSID from the list of available networks and enter the password.
 
 After connected, user can open the browser to browse the web.
 
@@ -334,11 +326,7 @@ After connected, user can open the browser to browse the web.
 
 5.9 Bluetooth
 ^^^^^^^^^^^^^^^^^
-
-Click **Settings -> Connected devices(Bluetooth) -> Connection
-preferences -> Bluetooth -> turn on**
-
-Select the available device in the list to pair.
+Click *Settings -> Connected devices(Bluetooth) -> Connection preferences -> Bluetooth -> turn on*, Select the available device in the list to pair.
 
 .. image:: image/EM3288_Android9_41.jpg
 
@@ -351,16 +339,15 @@ After pairing, devices can connect with each other automatically
 5.10 4G Network
 ^^^^^^^^^^^^^^^^^
 
-*Step 1*, Insert 4G module to PCI-E slot (4G model:EC20).
+Step 1, Insert 4G module to PCI-E slot (4G model:EC20).
 
-*Step 2*, Connect antenna and insert SIM card.
+Step 2, Connect antenna and insert SIM card.
 
-*Step 3*, The default connection is 4G network after power on.
+Step 3, The default connection is 4G network after power on.
 
 4G network settings:
 
-**Settings -> Networks & internet -> Mobile network -> Preferred network
-type -> 4G**
+*Settings -> Networks & internet -> Mobile network -> Preferred network type -> 4G*
 
 .. image:: image/EM3288_Android9_41.jpg
 
@@ -373,10 +360,10 @@ type -> 4G**
 .. image:: image/EM3288_Android9_48.jpg
 
 5.11 GPS
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^
 
 Connect GPS antenna, then power on and install the APP
-**GPS_test1.2.4.apk** (*path: CD/Tools/)*
+**GPS_test1.2.4.apk** path: :file:`CD/Tools/`
 
 .. image:: image/EM3288_Android9_49.jpg
 
@@ -385,10 +372,9 @@ Connect GPS antenna, then power on and install the APP
 .. image:: image/EM3288_Android9_51.jpg
 
 5.12 Camera
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
-Connect the camera module (OV13850) to the development board **before
-power on**\ ，then click the camera app to test.
+Connect the camera module (OV13850) to the development board **before power on**, then click the camera app to test.
 
 .. image:: image/EM3288_Android9_52.jpg
 
@@ -397,8 +383,7 @@ power on**\ ，then click the camera app to test.
 5.13 SATA
 ^^^^^^^^^^^^^^^^^
 
-EM3288 not support sata Hot-plug. Connect the sata module to the
-development board **before power on**，then the sata will auto mount.
+EM3288 not support sata Hot-plug. Connect the sata module to the development board **before power on**，then the sata will auto mount.
 
 .. image:: image/EM3288_Android9_54.jpg
 
@@ -408,7 +393,5 @@ development board **before power on**，then the sata will auto mount.
 
 .. image:: image/EM3288_Android9_57.jpg
 
-The current supplied by the development board is not enough to maintain
-the stable operation of SATA, it is recommended to provide an external
-power supply for SATA.
+The current supplied by the development board is not enough to maintain the stable operation of SATA, it is recommended to provide an external power supply for SATA.
 
