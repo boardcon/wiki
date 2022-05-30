@@ -206,8 +206,7 @@ Step 3, keep pressing the **Recover Key,** then connect PC and development board
 .. image:: image/EM3288_Android9_22.jpg
 .. image:: image/EM3288_Android9_23.png
 
-Step 4, click *Upgrade Firmware  ->  Firmware*, select
-**update.img**. Click *Upgrade* to flash.
+Step 4, click *Upgrade Firmware  ->  Firmware*, select **update.img**. Click *Upgrade* to flash.
 
 .. image:: image/EM3288_Android9_24.png
 
@@ -218,9 +217,7 @@ Download complete.
 User can also update the firmware separately.
 
 Step 1, Click the column on the right side for the path of the file want to flash.
-
 Step 2, Select the checkbox on the left.
-
 Step 3, Click *Run* to flash the image.
 
 .. image:: image/EM3288_Android9_26.png
@@ -294,7 +291,7 @@ Step 2, click on the APP to start recording, speech in front of the microphone t
 
 .. image:: image/EM3288_Android9_38.jpg
 
-After finish recording, click *Stop* menu and select **Save** to store file.
+After finish recording, click *Stop* menu and select *Save* to store file.
 
 The default storage path is :file:`Internal Memory/Records`
 
@@ -317,7 +314,6 @@ Wait a moment then run **hwclock** again, it can be seen the time has changed.
 ^^^^^^^^^^^^^^^^^
 
 Connect the WiFi antenna, then click *Settings -> Network&internet -> WiFi -> turn on*, select the SSID from the list of available networks and enter the password.
-
 After connected, user can open the browser to browse the web.
 
 .. image:: image/EM3288_Android9_41.jpg
@@ -328,6 +324,7 @@ After connected, user can open the browser to browse the web.
 
 5.9 Bluetooth
 ^^^^^^^^^^^^^^^^^
+
 Click *Settings -> Connected devices(Bluetooth) -> Connection preferences -> Bluetooth -> turn on*, Select the available device in the list to pair.
 
 .. image:: image/EM3288_Android9_41.jpg
