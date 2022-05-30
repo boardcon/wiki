@@ -340,6 +340,8 @@ preferences -> Bluetooth -> turn on**
 
 Select the available device in the list to pair.
 
+.. image:: image/EM3288_Android9_41.jpg
+
 .. image:: image/EM3288_Android9_44.jpg
 
 .. image:: image/EM3288_Android9_45.jpg
@@ -360,15 +362,15 @@ After pairing, devices can connect with each other automatically
 **Settings -> Networks & internet -> Mobile network -> Preferred network
 type -> 4G**
 
+.. image:: image/EM3288_Android9_41.jpg
+
+.. image:: image/EM3288_Android9_42.jpg
+
 .. image:: image/EM3288_Android9_46.jpg
 
-.. image:: image/EM3288_Android9_447.jpg
+.. image:: image/EM3288_Android9_47.jpg
 
 .. image:: image/EM3288_Android9_48.jpg
-
-.. image:: image/EM3288_Android9_49.jpg
-
-.. image:: media/image54.png
 
 5.11 GPS
 ^^^^^^^^^^^^^^^^^
@@ -376,11 +378,11 @@ type -> 4G**
 Connect GPS antenna, then power on and install the APP
 **GPS_test1.2.4.apk** (*path: CD/Tools/)*
 
+.. image:: image/EM3288_Android9_49.jpg
+
 .. image:: image/EM3288_Android9_50.jpg
 
 .. image:: image/EM3288_Android9_51.jpg
-
-.. image:: image/EM3288_Android9_52.jpg
 
 5.12 Camera
 ^^^^^^^^^^^^^^^^^
@@ -388,9 +390,9 @@ Connect GPS antenna, then power on and install the APP
 Connect the camera module (OV13850) to the development board **before
 power on**\ ，then click the camera app to test.
 
-.. image:: image/EM3288_Android9_53.jpg
+.. image:: image/EM3288_Android9_52.jpg
 
-.. image:: image/EM3288_Android9_54.jpg
+.. image:: image/EM3288_Android9_53.jpg
 
 5.13 SATA
 ^^^^^^^^^^^^^^^^^
@@ -398,13 +400,13 @@ power on**\ ，then click the camera app to test.
 EM3288 not support sata Hot-plug. Connect the sata module to the
 development board **before power on**，then the sata will auto mount.
 
+.. image:: image/EM3288_Android9_54.jpg
+
 .. image:: image/EM3288_Android9_55.png
 
 .. image:: image/EM3288_Android9_56.png
 
 .. image:: image/EM3288_Android9_57.jpg
-
-.. image:: image/EM3288_Android9_58.jpg
 
 The current supplied by the development board is not enough to maintain
 the stable operation of SATA, it is recommended to provide an external
