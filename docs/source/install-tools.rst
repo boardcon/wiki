@@ -65,5 +65,5 @@ After all, click *connect*
  
 .. note:: 
 
- If open more than one serial terminal tools, and they use the same serial port, there will be reported **the port is busy**.
+ If open more than one serial terminal tools, and they use the same serial port, there will be reported *the port is busy*.
  **Solution**: Turn off the serial tool that unnecessary.
