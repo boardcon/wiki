@@ -234,6 +234,7 @@ Step 3, Click *Run* to flash the image.
 Connect the board and monitor with a HDMI cable, then start up.
 
 .. image:: image/EM3288_Android9_27.jpg
+ :width: 400px
 
 5.2 SD Card
 ^^^^^^^^^^^^^^^^^
