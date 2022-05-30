@@ -197,10 +197,11 @@ Step 2, open :file:`AndroidTool_Release_v2.65\AndroidTool.exe`
 
 .. image:: image/EM3288_Android9_21.png
 
-Step 3, keep pressing the **Recover Key,** then connect PC and development board with Micro USB cable until the windows PC shows
+Step 3, keep pressing the **Recover Key,** then connect PC and development board with Micro USB cable until the PC Window shows
 **Found one LOADER Device**
 
-The USB power supply is only available for programming, and the current is not enough for the board to run.
+.. tips::
+ The USB power supply is only available for programming, and the current is not enough for the board to run.
 
 .. image:: image/EM3288_Android9_22.jpg
 .. image:: image/EM3288_Android9_23.png
