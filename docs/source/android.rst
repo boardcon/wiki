@@ -7,7 +7,7 @@ Android 9
 1.1 Vmware10.0 + ubuntu16.04
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Install Vmware10.0 in windows OS, and then install ubuntu16.04 in VMware
+Install Vmware10.0 in Windows OS, and then install ubuntu16.04 in VMware
 to compile. Please visit the official website http://www.ubuntu.com/ to
 download and install ubuntu operating system.
 
@@ -138,7 +138,7 @@ For alternative ways to Unzip Firmwarec, see below for your operating system.
 
 .. raw:: html
 
- <p><strong><font color="blue"> for Ubuntu OS</font></strong></p>
+ <p><strong><font color="blue">Ubuntu OS</font></strong></p>
     
 Step 1, copy **update.img** to the android source directory :file:`RKTools/linux/Linux_Pack_Firmware/rockdev/`
 
@@ -160,7 +160,7 @@ The unzip files will be generated in **output** directory.
 
 .. raw:: html
 
-    <strong><font color="blue"> for Windows OS </font></strong></b></b>
+ <p><strong><font color="blue"> Windows OS </font></strong></p>
 
 Step 1, copy **update.img** to the windows directory :file:`AndroidTool_Release_v2.65/rockdev/`
 
