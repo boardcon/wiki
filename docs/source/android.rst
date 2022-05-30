@@ -134,7 +134,7 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
 3.2 Unzip Firmware
 ^^^^^^^^^^^^^^^^^^^
 
-For alternative ways to Unzip Firmwarec, see below for your operating system.
+For alternative ways to Unzip Firmware, see below for your operating system.
 
 .. raw:: html
 
