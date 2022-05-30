@@ -1,7 +1,9 @@
 Android 9
 =========
 
-1 Compile Source 
+
+
+2 Compile Source 
 -----------------
 
 Step 1, unzip the source.
@@ -48,10 +50,10 @@ Step 5, Generated image file
 
 Images are generated in current directory.
 
-2 Images Operation
+3 Images Operation
 -----------------
 
-2.1 Pack Image
+3.1 Pack Image
 ^^^^^^^^^^^^^^
 
 Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows :file:`AndroidTool_Release_v2.65/rockdev/Imag`
@@ -68,7 +70,7 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
 
 .. image:: image/EM3288_Android9_4.png
 
-2.2 Unzip Firmware
+3.2 Unzip Firmware
 ^^^^^^^^^^^^^^^^^^^
 
 For alternative ways to Unzip Firmwarec, see below for your operating system.
@@ -126,7 +128,7 @@ The unzip files will be generated in :file:`AndroidTool_Release_v2.65\rockdev\Im
 
 .. image:: image/EM3288_Android9_10.png
 
-3 Burn Images
+4 Burn Images
 -------------
 
 Step 1, unzip **AndroidTool_Release_v2.65** on Windows.
@@ -164,17 +166,17 @@ Step 3, Click *run* to flash the image.
 
 .. image:: image/EM3288_Android9_26.png
 
-4 Android Application
+5 Android Application
 ----------------------
 
-4.1 HDMI Display
+5.1 HDMI Display
 ^^^^^^^^^^^^^^^^^
 
 Connect the board and monitor with a HDMI cable, then start up.
 
 .. image:: image/EM3288_Android9_27.jpg
 
-4.2 SD Card
+5.2 SD Card
 ^^^^^^^^^^^^^^^^^
 
 EM3288 supports SD Hot-plug.
@@ -184,7 +186,7 @@ EM3288 supports SD Hot-plug.
 .. image:: image/EM3288_Android9_29.gif
 
 
-4.3 USB Host
+5.3 USB Host
 ^^^^^^^^^^^^^^^^^
 
 The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or
@@ -192,7 +194,7 @@ other USB devices.
 
 .. image:: image/EM3288_Android9_30.gif
 
-4.4 Video Player
+5.4 Video Player
 ^^^^^^^^^^^^^^^^^
 
 Open **Video** and select file to play.
@@ -201,7 +203,7 @@ Open **Video** and select file to play.
 
 .. image:: image/EM3288_Android9_32.jpg
 
-4.5 Ethernet
+5.5 Ethernet
 ^^^^^^^^^^^^^^^^^
 
 Connect the Board and router with an Ethernet cable (default DHCP=Yes).
@@ -217,7 +219,7 @@ User can ping URL/IP at terminal, or open the browser to test Network.
 
 .. image:: image/EM3288_Android9_35.jpg
 
-4.6 Record
+5.6 Record
 ^^^^^^^^^^^^^^^^^
 
 *Step 1*, open the APP Recorder in Android.
@@ -243,7 +245,7 @@ The default storage path is
 
 .. image:: image/EM3288_Android9_39.jpg
 
-4.7 RTC
+5.7 RTC
 ^^^^^^^^
 
 Execute the command **hwclock** at CRT terminal
@@ -255,7 +257,7 @@ changed.
 
 .. image:: image/EM3288_Android9_40.png
 
-4.8 WiFi
+5.8 WiFi
 ^^^^^^^^^^^^^^^^^
 
 Connect the WiFi antenna, then click **Settings -> Network&internet ->
@@ -270,7 +272,7 @@ After connected, user can open the browser to browse the web.
 
 .. image:: image/EM3288_Android9_43.jpg
 
-4.9 Bluetooth
+5.9 Bluetooth
 ^^^^^^^^^^^^^^^^^
 
 Click **Settings -> Connected devices(Bluetooth) -> Connection
@@ -284,7 +286,7 @@ Select the available device in the list to pair.
 
 After pairing, devices can connect with each other automatically
 
-4.10 4G Network
+5.10 4G Network
 ^^^^^^^^^^^^^^^^^
 
 *Step 1*, Insert 4G module to PCI-E slot (4G model:EC20).
@@ -308,29 +310,29 @@ type -> 4G**
 
 .. image:: media/image54.png
 
-4.11 GPS
+5.11 GPS
 ^^^^^^^^^^^^^^^^^
 
 Connect GPS antenna, then power on and install the APP
 **GPS_test1.2.4.apk** (*path: CD/Tools/)*
 
-.. image:: image/EM3288_Android9_50.png
+.. image:: image/EM3288_Android9_50.jpg
 
-.. image:: image/EM3288_Android9_51.png
+.. image:: image/EM3288_Android9_51.jpg
 
-.. image:: image/EM3288_Android9_52.png
+.. image:: image/EM3288_Android9_52.jpg
 
-4.12 Camera
+5.12 Camera
 ^^^^^^^^^^^^^^^^^
 
 Connect the camera module (OV13850) to the development board **before
 power on**\ ，then click the camera app to test.
 
-.. image:: image/EM3288_Android9_53.png
+.. image:: image/EM3288_Android9_53.jpg
 
-.. image:: image/EM3288_Android9_54.png
+.. image:: image/EM3288_Android9_54.jpg
 
-4.13 SATA
+5.13 SATA
 ^^^^^^^^^^^^^^^^^
 
 EM3288 not support sata Hot-plug. Connect the sata module to the
@@ -340,9 +342,9 @@ development board **before power on**，then the sata will auto mount.
 
 .. image:: image/EM3288_Android9_56.png
 
-.. image:: image/EM3288_Android9_57.png
+.. image:: image/EM3288_Android9_57.jpg
 
-.. image:: image/EM3288_Android9_58.png
+.. image:: image/EM3288_Android9_58.jpg
 
 The current supplied by the development board is not enough to maintain
 the stable operation of SATA, it is recommended to provide an external
