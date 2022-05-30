@@ -19,7 +19,6 @@ EM3288 user manual
    :caption: Software
    
    install-tools
-   environment
  
 .. toctree::
    :maxdepth: 2
