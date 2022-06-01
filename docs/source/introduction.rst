@@ -9,7 +9,7 @@ This document is based on EM3288 V7(MINI3288 version: V4).
 1.1 Summary
 ^^^^^^^^^^^^
 
-| EM3288 is based on the Rockchip RK3288, Quad Core Cortex-A17 @1.8GHz.
+  EM3288 is based on the Rockchip RK3288, Quad Core Cortex-A17 @1.8GHz.
   RK3288 is powerful on multithreaded computing operation, graphics
   processing and video decoding ability. RK3288 supports Mali-T760 MP4
   Graphics Processing, OpenGL ES1.1/2.0/3.0, OpenVG1.1, OpenCL,
@@ -17,9 +17,7 @@ This document is based on EM3288 V7(MINI3288 version: V4).
   video decoding, 500% performance boost over Mali-400. On display
   aspects, RK3288 supports up to 18Gbps Data transmission rate and
   4Kx2K@60Hz Video resolution.
-| EM3288 is provided with full ready-to-run Android7.1.2 and Ubuntu SW
-  packages and comprehensive user manual and designing guide.
-
+  
 1.2 Rockchip RK3288 Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -46,7 +44,7 @@ Mali-T764 GPU, Supports AFBC (ARM Frame Buffer Compression)
 -  Display
 
 Support RGB/Dual LVDS/Dual MIPI-DSI/eDP interface, up to 3840*2160 resolution
-HDMI 2.0 for 4K@60Hz with HDCP 1.4/2.2
+HDMI 2.0 for 4K @60Hz with HDCP 1.4/2.2
 
 -  Security
 ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
@@ -66,7 +64,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 1.3 EM3288 Specifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: image/EM3288-SBC-V7.jpg
+.. image:: image/EM3288_SBC_Interfaces.gif
     :align: center
     
 +---------------+------------------------------------------------------+
@@ -82,9 +80,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | Memory        | 512MB/1GB/2GB DDR3                                   |
 +---------------+------------------------------------------------------+
 | Storage       | – 4/8/16/32GB eMMC Flash                             |
-|               |                                                      |
 |               | – 1x SATA                                            |
-|               |                                                      |
 |               | – 1 x Micro SD                                       |
 +---------------+------------------------------------------------------+
 | Power Supply  | 5V/3A                                                |
@@ -92,27 +88,20 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | USB           | 3x USB2.0 Host, 1x USB2.0 OTG                        |
 +---------------+------------------------------------------------------+
 | Video I/O     | – HDMI 2.0 up to 3840×2160@60p                       |
-|               |                                                      |
 |               | – 40-pin header for LVDS (multiplexed with VGA)      |
-|               |                                                      |
 |               | | – VGA                                              |
 |               | | – 40-pin FPC connector for TTL LCD                 |                                          
 |               | – 26-pin header for MIPI Camera                      |
 +---------------+------------------------------------------------------+
 | Audio I/O     | – HDMI                                               |
-|               |                                                      |
 |               | – 3.5mm jacks for Audio out and Line in              |
-|               |                                                      |
 |               | – Differential MIC                                   |
-|               |                                                      |
 |               | ES8388 audio codec                                   |
 +---------------+------------------------------------------------------+
 | Debugging     | Serial console via 3-pin header                      |
 +---------------+------------------------------------------------------+
 | Connectivity  | – Gigabit Ethernet. RTL8211E-VB-CG controller        |
-|               |                                                      |
 |               | – Optional 802.11b/g/n and Bluetooth4.0              |
-|               |                                                      |
 |               | – Optional 4G Module (Built-in GPS) and SIM card slot|
 |               | – Optional GPS model via SATES (HK) ST-91-U7         |
 +---------------+------------------------------------------------------+
@@ -139,9 +128,9 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 1.6 CPU Introduction 
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: image/image5.jpeg
-   :alt: arm-MINI3288
-    :align: center
+.. image:: image/MINI3288.gif
+   :alt: MINI3288
+   :align: center
     
 **Board Dimension**
 
@@ -150,9 +139,6 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | \* Pin number: (J11+J12) x 100 = 200 pins
 | \* Layer: 8 Layers, complying with EMS/EMI
 
-.. image:: image/image6.png
-     :align: center
-    
 **Pin Definition**
 
 +---+-----------+----+-------------+----+-----------+----+----------+
@@ -174,8 +160,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | 5 | GND       | 55 | MIP         | 5  | nRESET    | 55 | UA       |
 |   |           |    | I_TX/RX_D3N |    |           |    | RT1_CTSn |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 6 | GND       | 56 | DVP_PWR     | 6  | MDI0+     | 56 | UA       |
-|   |           |    |             |    |           |    | RT1_RTSn |
+| 6 | GND       | 56 | DVP_PWR     | 6  | MDI0+     | 56 |UART1_RTSn|
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 7 | TX_1-     | 57 | HSIC_STROBE | 7  | MDI1+     | 57 | UART1_R  |
 |   |           |    |             |    |           |    | X_TS0_D0 |
@@ -193,116 +178,104 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | 13| I2C5      | 63 | CIF_D2      | 13 | MDI2-     | 63 | S        |
 |   | _SDA_HDMI |    |             |    |           |    | DMMC_CLK |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | I2C5      | 64 | CIF_D5      | 14 | MDI3-     | 64 | GND      |
-| 4 | _SCL_HDMI |    |             |    |           |    |          |
+| 14| I2C5      | 64 | CIF_D5      | 14 | MDI3-     | 64 | GND      |
+|   | _SCL_HDMI |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | GND       | 65 | CIF_D4      | 15 | GND       | 65 | SDMMC_D0 |
-| 5 |           |    |             |    |           |    |          |
+| 15| GND       | 65 | CIF_D4      | 15 | GND       | 65 | SDMMC_D0 |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | LCD_VSYNC | 66 | CIF_D7      | 16 | RST_KEY   | 66 | S        |
-| 6 |           |    |             |    |           |    | DMMC_CMD |
+| 16| LCD_VSYNC | 66 | CIF_D7      | 16 | RST_KEY   | 66 | SDMMC_CMD|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | LCD_HSYNC | 67 | CIF_D6      | 17 | SDIO0_CMD | 67 | SDMMC_D2 |
-| 7 |           |    |             |    |           |    |          |
+| 17| LCD_HSYNC | 67 | CIF_D6      | 17 | SDIO0_CMD | 67 | SDMMC_D2 |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | LCD_CLK   | 68 | CIF_D9      | 18 | SDIO0_D0  | 68 | SDMMC_D1 |
-| 8 |           |    |             |    |           |    |          |
+| 18| LCD_CLK   | 68 | CIF_D9      | 18 | SDIO0_D0  | 68 | SDMMC_D1 |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | LCD_DEN   | 69 | CIF_D8      | 19 | SDIO0_D1  | 69 | S        |
-| 9 |           |    |             |    |           |    | DMMC_DET |
+| 19| LCD_DEN   | 69 | CIF_D8      | 19 | SDIO0_D1  | 69 | SDMMC_DET|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 70 | CIF_PDN0    | 20 | SDIO0_D2  | 70 | SDMMC_D3 |
-| 0 | D_D0_LD0P |    |             |    |           |    |          |
+| 20|LCD_D0_LD0P| 70 | CIF_PDN0    | 20 | SDIO0_D2  | 70 | SDMMC_D3 |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 71 | CIF_D10     | 21 | SDIO0_D3  | 71 | S        |
-| 1 | D_D1_LD0N |    |             |    |           |    | DMMC_PWR |
+| 21|LCD_D1_LD0N| 71 | CIF_D10     | 21 | SDIO0_D3  | 71 | SDMMC_PWR|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 72 | CIF_HREF    | 22 | SDIO0_CLK | 72 | GP       |
-| 2 | D_D2_LD1P |    |             |    |           |    | IO0_B5_D |
+| 22|LCD_D2_LD1P| 72 | CIF_HREF    | 22 | SDIO0_CLK | 72 |GPIO0_B5_D|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 73 | CIF_VSYNC   | 23 | BT_WAKE   | 73 | GND      |
-| 3 | D_D3_LD1N |    |             |    |           |    |          |
+| 23|LCD_D3_LD1N| 73 | CIF_VSYNC   | 23 | BT_WAKE   | 73 | GND      |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 74 | CIF_CLKOUT  | 24 | SDIO0_WP  | 74 | GP       |
-| 4 | D_D4_LD2P |    |             |    |           |    | IO7_B7_D |
+| 24|LCD_D4_LD2P| 74 | CIF_CLKOUT  | 24 | SDIO0_WP  | 74 |GPIO7_B7_D|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 75 | CIF_CLKIN   | 25 | WI        | 75 | I2S_SDI  |
-| 5 | D_D5_LD2N |    |             |    | FI_REG_ON |    |          |
+| 25|LCD_D5_LD2N| 75 | CIF_CLKIN   | 25 |WIFI_REG_ON| 75 | I2S_SDI  |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 76 | I2C3_SCL    | 26 | BT_       | 76 | I2S_MCLK |
-| 6 | D_D6_LD3P |    |             |    | HOST_WAKE |    |          |
+| 26|LCD_D6_LD3P| 76 | I2C3_SCL    | 26 |BT_HOS     | 76 | I2S_MCLK |
+|   |           |    |             |    | T_WAKE    |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 77 | I2C3_SDA    | 27 | WIFI_     | 77 | I2S_SCLK |
-| 7 | D_D7_LD3N |    |             |    | HOST_WAKE |    |          |
+| 27|LCD_D7_LD3N| 77 | I2C3_SDA    | 27 | WIFI_H    | 77 | I2S_SCLK |
+|   |           |    |             |    | OST_WAKE  |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 78 | GND         | 28 | BT_RST    | 78 | I2S      |
-| 8 | D_D8_LD4P |    |             |    |           |    | _LRCK_RX |
+| 28| LC        | 78 | GND         | 28 | BT_RST    | 78 |I2S_L     |
+|   | D_D8_LD4P |    |             |    |           |    |RCK_RX    |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 2 | LC        | 79 | GPIO0_B2_D  | 29 | SPI2_CLK  | 79 | I2S      |
-| 9 | D_D9_LD4N |    |             |    |           |    | _LRCK_TX |
+| 29| LC        | 79 | GPIO0_B2_D  | 29 | SPI2_CLK  | 79 | I2S      |
+|   | D_D9_LD4N |    |             |    |           |    | _LRCK_TX |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD_D10   | 80 | GPIO7_A3_D  | 30 | SP2I_CSn0 | 80 | I2S_SDO0 |
-| 0 | _LCK0P    |    |             |    |           |    |          |
+| 30| LCD_D10   | 80 | GPIO7_A3_D  | 30 | SP2I_CSn0 | 80 | I2S_SDO0 |
+|   | _LCK0P    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD_D11   | 81 | GPIO7_A6_U  | 31 | SPI2_RXD  | 81 | 2S_SDO1  |
-| 1 | _LCK0N    |    |             |    |           |    |          |
+| 31| LCD_D11   | 81 | GPIO7_A6_U  | 31 | SPI2_RXD  | 81 | 2S_SDO1  |
+|   | _LCK0N    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 82 | GPIO0_A6_U  | 32 | SPI2_TXD  | 82 | I2S_SDO2 |
-| 2 | _D12_LD5P |    |             |    |           |    |          |
+| 32| LCD       | 82 | GPIO0_A6_U  | 32 | SPI2_TXD  | 82 | I2S_SDO2 |
+|   | _D12_LD5P |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 83 | LED0_AD0    | 33 | OTG       | 83 | I2S_SDO3 |
-| 3 | _D13_LD5N |    |             |    | _VBUS_DRV |    |          |
+| 33| LCD       | 83 | LED0_AD0    | 33 | OTG       | 83 | I2S_SDO3 |
+|   | _D13_LD5N |    |             |    | _VBUS_DRV |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 84 | LED1_AD1    | 34 | HOST      | 84 | SPDIF_TX |
-| 4 | _D14_LD6P |    |             |    | _VBUS_DRV |    |          |
+| 34| LCD       | 84 | LED1_AD1    | 34 | HOST      | 84 | SPDIF_TX |
+|   | _D14_LD6P |    |             |    | _VBUS_DRV |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 85 | VCC_LAN     | 35 | UART0_RX  | 85 | I2C2_SDA |
-| 5 | _D15_LD6N |    |             |    |           |    |          |
+| 35| LCD       | 85 | VCC_LAN     | 35 | UART0_RX  | 85 | I2C2_SDA |
+|   | _D15_LD6N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 86 | PS2_DATA    | 36 | UART0_TX  | 86 | GND      |
-| 6 | _D16_LD7P |    |             |    |           |    |          |
+| 36| LCD       | 86 | PS2_DATA    | 36 | UART0_TX  | 86 | GND      |
+|   | _D16_LD7P |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 87 | PS2_CLK     | 37 | GND       | 87 | I2C1_SDA |
-| 7 | _D17_LD7N |    |             |    |           |    |          |
+| 37| LCD       | 87 | PS2_CLK     | 37 | GND       | 87 | I2C1_SDA |
+|   | _D17_LD7N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 88 | ADC0_IN     | 38 | UART0_CTS | 88 | I2C2_SCL |
-| 8 | _D18_LD8P |    |             |    |           |    |          |
+| 38| LCD       | 88 | ADC0_IN     | 38 | UART0_CTS | 88 | I2C2_SCL |
+|   | _D18_LD8P |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD       | 89 | GPIO0_A7_U  | 39 | OTG_DM    | 89 | I2C4_SDA |
-| 9 | _D19_LD8N |    |             |    |           |    |          |
+| 39| LCD       | 89 | GPIO0_A7_U  | 39 | OTG_DM    | 89 | I2C4_SDA |
+|   | _D19_LD8N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | LCD       | 90 | ADC1_IN     | 40 | UART0_RTS | 90 | I2C1_SCL |
-| 0 | _D20_LD9P |    |             |    |           |    |          |
+| 40| LCD       | 90 | ADC1_IN     | 40 | UART0_RTS | 90 | I2C1_SCL |
+|   | _D20_LD9P |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | LCD       | 91 | VCCIO_SD    | 41 | OTG_DP    | 91 | UART2_RX |
-| 1 | _D21_LD9N |    |             |    |           |    |          |
+| 41| LCD       | 91 | VCCIO_SD    | 41 | OTG_DP    | 91 | UART2_RX |
+|   | _D21_LD9N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | LCD_D22   | 92 | ADC2_IN     | 42 | OTG_ID    | 92 | I2C4_SCL |
-| 2 | _LCK1P    |    |             |    |           |    |          |
+| 42| LCD_D22   | 92 | ADC2_IN     | 42 | OTG_ID    | 92 | I2C4_SCL |
+|   | _LCK1P    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | LCD_D23   | 93 | VCC_CAM     | 43 | HOST1_DM  | 93 | UART3_RX |
-| 3 |    _LCK1N |    |             |    |           |    |          |
+| 43| LCD_D23   | 93 | VCC_CAM     | 43 | HOST1_DM  | 93 | UART3_RX |
+|   |    _LCK1N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | GND       | 94 | VCCA_33     | 44 | OTG_DET   | 94 | UART2_TX |
-| 4 |           |    |             |    |           |    |          |
+| 44| GND       | 94 | VCCA_33     | 44 | OTG_DET   | 94 | UART2_TX |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_TX/RX| 95 | VCC_18      | 45 | HOST1_DP  | 95 | UA       |
-| 5 | _CLKN     |    |             |    |           |    | RT3_RTSn |
+| 45| MIPI_TX/RX| 95 | VCC_18      | 45 | HOST1_DP  | 95 | UA       |
+|   | _CLKN     |    |             |    |           |    | RT3_RTSn |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_TX/RX| 96 | VCC_RTC     | 46 | HOST2_DM  | 96 | UART3_TX |
-| 6 | _D0P      |    |             |    |           |    |          |
+| 46| MIPI_TX/RX| 96 | VCC_RTC     | 46 | HOST2_DM  | 96 | UART3_TX |
+|   | _D0P      |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_T    | 97 | VCC_IO      | 47 | SPI0_CSn0 | 97 | PWM1     |
-| 7 | X/RX_CLKP |    |             |    |           |    |          |
+| 47| MIPI_T    | 97 | VCC_IO      | 47 | SPI0_CSn0 | 97 | PWM1     |
+|   | X/RX_CLKP |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_TX/RX| 98 | GND         | 48 | HOST2_DP  | 98 | UA       |
-| 8 | _D0N      |    |             |    |           |    | RT3_CTSn |
+| 48| MIPI_TX/RX| 98 | GND         | 48 | HOST2_DP  | 98 | UA       |
+|   | _D0N      |    |             |    |           |    | RT3_CTSn |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 |MIPI_TX/RX | 99 | VCC_IO      | 49 | SPI0_CLK  | 99 | PWR_KEY  |
-| 9 |_D2N       |    |             |    |           |    |          |
+| 49|MIPI_TX/RX | 99 | VCC_IO      | 49 | SPI0_CLK  | 99 | PWR_KEY  |
+|   |_D2N       |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 5 | MIPI_TX/RX| 1  | GND         | 50 | GND       | 1  | GP       |
-| 0 | _D1N      | 00 |             |    |           | 00 | IO7_C5_D |
+| 50| MIPI_TX/RX| 1  | GND         | 50 | GND       | 1  | GP       |
+|   | _D1N      | 00 |             |    |           | 00 | IO7_C5_D |
 +---+-----------+----+-------------+----+-----------+----+----------+
 
 2 Peripherals Introduction
@@ -324,13 +297,12 @@ EM3288 Power Supply – 5V DC power supply or external Li+ battery
 | 1 | VDD5V  | Main power supply. DC 5V  | 2 | GND    | Ground       |
 |   |        | power in                  |   |        |              |
 +---+--------+---------------------------+---+--------+--------------+
-| 3 | GND    | Ground                    |   |        |              |
+| 3 | GND    | Ground                    |                           |
 +---+--------+---------------------------+---+--------+--------------+
 
 -  **Lithium battery (J17)**
 
-EM3288 provides an external Li-battery interface. **It is a Reserved
-interface that function not supported currently.**
+EM3288 provides an external Li-battery interface. **It is a reserved interface.**
 
 .. image:: image/7-DC-SATA.gif
     :align: center
@@ -354,9 +326,7 @@ the Ethernet chip. RJ45 connector
 
 -  Supports 10/100/1000-Mbps data transfer rates with the RGMII
    interfaces
-
 -  Supports both full-duplex and half-duplex operation
-
 -  Supports IEEE 802.1Q VLAN tag detection for reception frames
 
 +---+---------+--------------------+---+--------+--------------------+
@@ -400,14 +370,10 @@ is designed to work with USB host as a high-speed hub.
 **Feature**
 
 -  Compatible with USB Host2.0 specification
-
 -  Supports high-speed (480Mbps), full-speed (12Mbps) and low-speed
    (1.5Mbps) mode
-
 -  Supports automatic switching between bus- and self-powered modes
-
 -  Provides 16 host mode channels
-
 -  Support periodic out channel in host mode
 
 .. image:: image/9-USB-AF.gif
@@ -418,8 +384,7 @@ is designed to work with USB host as a high-speed hub.
 +---+---------+--------------------+---+--------+--------------------+
 |Pin| Signal  | Description        |Pin| Signal | Description        |
 +---+---------+--------------------+---+--------+--------------------+
-| 1 | VCC_5V  | USB Power. DC 5V   | 2 | U      | USB data-          |
-|   |         |                    |   | SB_DM2 |                    |
+| 1 | VCC_5V  | USB Power. DC 5V   | 2 | USB_DM2| USB data-          |
 +---+---------+--------------------+---+--------+--------------------+
 | 3 | USB_DP2 | USB Data+          | 4 | GND    | Ground             |
 +---+---------+--------------------+---+--------+--------------------+
@@ -436,13 +401,11 @@ is designed to work with USB host as a high-speed hub.
 +---+-------------+---------------+---+--------------+--------------+
 |Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | VCC_USB     | USB Power. DC | 2 | USB_DM3      | USB data-    |
-|   |             | 5V            |   |              |              |
+| 1 | VCC_USB     |USB Power. DC5V| 2 | USB_DM3      | USB data-    |
 +---+-------------+---------------+---+--------------+--------------+
 | 3 | USB_DP3     | USB Data+     | 4 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 5 | VCC_USB     | USB Power. DC | 6 | USB_DM4      | USB data-    |
-|   |             | 5V            |   |              |              |
+| 5 | VCC_USB     |USB Power. DC5V| 6 | USB_DM4      | USB data-    |
 +---+-------------+---------------+---+--------------+--------------+
 | 7 | USB_DP4     | USB Data+     | 8 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
@@ -460,13 +423,10 @@ transfer file.
 **Feature**
 
 -  Compatible with USB OTG2.0 specification
-
 -  Supports USB 2.0 High Speed (480Mbps), Full Speed (12Mbps) and Low
    Speed (1.5Mbps) operation in host mode
-
 -  Supports USB 2.0 High Speed (480 Mbps) and Full Speed (12 Mbps)
    operation in peripheral mode.
-
 -  Hardware support for OTG signaling, session request protocol, and
    host negotiation protocol.
 
@@ -539,7 +499,6 @@ the regular 19pins HDMI type A, with width 13.9mm and thickness 4.45mm.
 |   |             |               |   |              | pair         |
 +---+-------------+---------------+---+--------------+--------------+
 | 11| GND         | Ground        | 12| TX_C-        |              |
-|   |             |               |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
 | 13| HDMI_CEC    | Consumer      | 14| NC           | Not connect  |
 |   |             | electronics   |   |              |              |
@@ -549,10 +508,8 @@ the regular 19pins HDMI type A, with width 13.9mm and thickness 4.45mm.
 |   |             | clock         |   |              | data         |
 +---+-------------+---------------+---+--------------+--------------+
 | 17| GND         | Ground        | 18| HDMI_VCC     | 5V           |
-|   |             |               |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 19| HDMI_HPD    | Hot Plug      | 20| GND          | Ground       |
-|   |             | Detect        |   |              |              |
+| 19| HDMI_HPD    |Hot Plug Detect| 20| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
 | 21| GND         | Ground        | 22| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
@@ -568,11 +525,8 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 **Features**
 
 -  Low power
-
 -  Integrated ADC and DAC
-
 -  IIS transfer audio data
-
 -  Stereo output, support recording
 
 .. image:: image/14-Audio.gif
@@ -703,39 +657,31 @@ J21 is a 40-pin FPC connector for TTL LCD.
     :align: center
     
 +---+-----------+---+------------+---+------------+---+-------------+
-| P | Signal    | P | Signal     | P | Signal     | P | Signal      |
-| i |           | i |            | i |            | i |             |
-| n |           | n |            | n |            | n |             |
+|Pin| Signal    |Pin| Signal     |Pin| Signal     |Pin| Signal      |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 1 | VCC5V     | 2 | VCC5V      | 3 | L          | 4 | LCD_D1_LD0N |
-|   |           |   |            |   | CD_D0_LD0P |   |             |
+| 1 | VCC5V     | 2 | VCC5V      | 3 | LCD_D0_LD0P| 4 | LCD_D1_LD0N |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 5 | LC        | 6 | CD_D3_LD1N | 7 | L          | 8 | LCD_D5_LD2N |
-|   | D_D2_LD1P |   |            |   | CD_D4_LD2P |   |             |
+| 5 |LCD_D2_LD1P| 6 | CD_D3_LD1N | 7 | LCD_D4_LD2P| 8 | LCD_D5_LD2N |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 9 | LC        | 1 | L          | 1 | GND        | 1 | LCD_D8_LD4P |
-|   | D_D6_LD3P | 0 | CD_D7_LD3N | 1 |            | 2 |             |
+| 9 |LCD_D6_LD3P| 10| LCD_D7_LD3N| 11| GND        | 12| LCD_D8_LD4P |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 1 | LC        | 1 | LCD        | 1 | LCD        | 1 | L           |
-| 3 | D_D9_LD4N | 4 | _D10_LCK0P | 5 | _D11_LCK0N | 6 | CD_D12_LD5P |
+| 13| LC        | 14| LCD        | 15| LCD        | 16| L           |
+|   | D_D9_LD4N |   | _D10_LCK0P |   | _D11_LCK0N |   | CD_D12_LD5P |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 1 | LCD       | 1 | LC         | 1 | LC         | 2 | GND         |
-| 7 | _D13_LD5N | 8 | D_D14_LD6P | 9 | D_D15_LD6N | 0 |             |
+| 17| LCD       | 18| LC         | 19| LC         | 20| GND         |
+|   | _D13_LD5N |   | D_D14_LD6P |   | D_D15_LD6N |   |             |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 2 | LCD       | 2 | LC         | 2 | LC         | 2 | L           |
-| 1 | _D16_LD7P | 2 | D_D17_LD7N | 3 | D_D18_LD8P | 4 | CD_D19_LD8N |
+| 21| LCD       | 2 |LCD_D17_LD7N| 2 |LCD_D18_LD8P| 24| LCD_D19_LD8N|
+|   | _D16_LD7P |   |            | 3 |            |   |             |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 2 | LCD       | 2 | LC         | 2 | LCD        | 2 | LC          |
-| 5 | _D20_LD9P | 6 | D_D21_LD9N | 7 | _D22_LCK1P | 8 | D_D23_LCK1N |
+| 25| LCD       | 26| LC         | 27| LCD        | 28| LC          |
+|   | _D20_LD9P |   | D_D21_LD9N |   | _D22_LCK1P |   | D_D23_LCK1N |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 2 | GND       | 3 | LVDS_PWM   | 3 | GND        | 3 | GND         |
-| 9 |           | 0 |            | 1 |            | 2 |             |
+| 29| GND       | 30| LVDS_PWM   | 31| GND        | 32| GND         |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 3 | LCD_DEN   | 3 | LCD_VSYNC  | 3 | LCD_HSYNC  | 3 | LCD_CLK     |
-| 3 |           | 4 |            | 5 |            | 6 |             |
+| 33| LCD_DEN   | 34| LCD_VSYNC  | 35| LCD_HSYNC  | 36| LCD_CLK     |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 3 | TSXM      | 3 | TSXP       | 3 | TSYM       | 4 | TSYP        |
-| 7 |           | 8 |            | 9 |            | 0 |             |
+| 37| TSXM      | 38| TSXP       | 39| TSYM       | 40| TSYP        |
 +---+-----------+---+------------+---+------------+---+-------------+
 
 2.11 MIPI (CON5)
@@ -747,20 +693,15 @@ EM3288 supports MIPI Camera.
 
 -  Embedded 3 MIPI PHY, MIPI 0 only for TX, MIPI 1 for TX and RX, MIPI 2
    only for RX
-
 -  Support 4 data lane, providing up to 6Gbps data rate
-
 -  Support 1080p@60fps output
-
 -  Lane operation ranging from 80 Mbps to 1.5Gbps in forward direction.
 
 .. image:: image/19-mipi-Camera.gif
     :align: center
     
 +---+-----------+------------------+---+-----------+-----------------+
-| P | Signal    | Description      | P | Signal    | Description     |
-| i |           |                  | i |           |                 |
-| n |           |                  | n |           |                 |
+|Pin| Signal    | Description      |Pin| Signal    | Description     |
 +---+-----------+------------------+---+-----------+-----------------+
 | 1 | VCC5V     | DC 5V            | 2 | VCC5V     | DC 5V           |
 +---+-----------+------------------+---+-----------+-----------------+
@@ -770,35 +711,31 @@ EM3288 supports MIPI Camera.
 +---+-----------+------------------+---+-----------+-----------------+
 | 7 | VCCA_18   | DC 1.8V          | 8 | GND       | Ground          |
 +---+-----------+------------------+---+-----------+-----------------+
-| 9 | LCD1_BL   | Backlight        | 1 | L         | Backlight       |
-|   |           |                  | 0 | CD1_BL_EN | enable          |
+| 9 | LCD1_BL   | Backlight        | 10| LCD1_BL_EN| Backlight enable|
 +---+-----------+------------------+---+-----------+-----------------+
-| 1 | C         | Camera clock     | 1 | I2C3_SCL  | I2C clock line  |
-| 1 | IF_CLKOUT |                  | 2 |           |                 |
+| 11| CIF_CLKOUT| Camera clock     | 12| I2C3_SCL  | I2C clock line  |
 +---+-----------+------------------+---+-----------+-----------------+
-| 1 | I2C3_SDA  | I2c date line    | 1 | TOUCH_RST | Touch screen    |
-| 3 |           |                  | 4 |           | reset           |
+| 13| I2C3_SDA  | I2c date line    | 14| TOUCH_RST | Touch screen    |
+|   |           |                  |   |           | reset           |
 +---+-----------+------------------+---+-----------+-----------------+
-| 1 | TOUCH_INT | Touch screen int | 1 | GND       | Ground          |
-| 5 |           |                  | 6 |           |                 |
+| 15| TOUCH_INT | Touch screen int | 16| GND       | Ground          |
 +---+-----------+------------------+---+-----------+-----------------+
-| 1 | CLKN      | MIPI clock -     | 1 | CLKP      | MIPI clock +    |
-| 7 |           |                  | 8 |           |                 |
+| 17| CLKN      | MIPI clock -     | 18| CLKP      | MIPI clock +    |
 +---+-----------+------------------+---+-----------+-----------------+
-| 1 | D0N       | Negative         | 2 | D0P       | Positive        |
-| 9 |           | Transmission     | 0 |           | Transmission    |
+| 19| D0N       | Negative         | 20| D0P       | Positive        |
+|   |           | Transmission     |   |           | Transmission    |
 |   |           | Data of Pixel0   |   |           | Data of Pixel0  |
 +---+-----------+------------------+---+-----------+-----------------+
-| 2 | D1N       | Negative         | 2 | D1P       | Positive        |
-| 1 |           | Transmission     | 2 |           | Transmission    |
+| 21| D1N       | Negative         | 22| D1P       | Positive        |
+|   |           | Transmission     |   |           | Transmission    |
 |   |           | Data of Pixel1   |   |           | Data of Pixel1  |
 +---+-----------+------------------+---+-----------+-----------------+
-| 2 | D2N       | Negative         | 2 | D2P       | Positive        |
-| 3 |           | Transmission     | 4 |           | Transmission    |
+| 23| D2N       | Negative         | 24| D2P       | Positive        |
+|   |           | Transmission     |   |           | Transmission    |
 |   |           | Data of Pixel2   |   |           | Data of Pixel2  |
 +---+-----------+------------------+---+-----------+-----------------+
-| 2 | D3N       | Negative         | 2 | D3P       | Positive        |
-| 5 |           | Transmission     | 6 |           | Transmission    |
+| 25| D3N       | Negative         | 26| D3P       | Positive        |
+|   |           | Transmission     |   |           | Transmission    |
 |   |           | Data of Pixel3   |   |           | Data of Pixel3  |
 +---+-----------+------------------+---+-----------+-----------------+
 
@@ -816,31 +753,19 @@ acquisition times.
 **Features**
 
 -  Ublox 7 high performance and low power consumption GPS Chipset
-
 -  Very high sensitivity (Tracking Sensitivity: -162dBm)
-
 -  Extremely fast TTFF (Time to First Fix) at low signal level
-
 -  Two serial port: UART, I2C
-
 -  Built-in LNA
-
 -  A-GPS Support
-
 -  Exceptional jamming immunity
-
 -  Support NMEA 0183 and ublox binary protocol
-
 -  Channels: 56
-
 -  Available Baud: 9,600 bps
-
 -  The antenna band is 1575.42MHZ; Voltage: 3.0-5.0V
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | GND         | Ground        | 2 | GPS_UART3_RX | UART3        |
 |   |             |               |   |              | receive      |
@@ -855,21 +780,18 @@ acquisition times.
 | 7 | GPSVDDIO    | IO Supply     | 8 | VDD_GPS      | Supply       |
 |   |             | Voltage       |   |              | voltage      |
 +---+-------------+---------------+---+--------------+--------------+
-| 9 | GPSRST      | Reset         | 1 | GND          | Ground       |
-|   |             |               | 0 |              |              |
+| 9 | GPSRST      | Reset         | 10| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | GPS_RFIN    | GPS signal    | 1 | GND          | Ground       |
-| 1 |             | input         | 2 |              |              |
+| 11| GPS_RFIN    | GPS signal    | 12| GND          | Ground       |
+|   |             | input         |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | NC          | Not connect   | 1 | RFVCC        | Output       |
-| 3 |             |               | 4 |              | Voltage RF   |
+| 13| NC          | Not connect   | 14| RFVCC        | Output       |
+|   |             |               |   |              | Voltage RF   |
 |   |             |               |   |              | section      |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | NC          | Not connect   | 1 | NC           | Not connect  |
-| 5 |             |               | 6 |              |              |
+| 15| NC          | Not connect   | 16| NC           | Not connect  |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | NC          | Not connect   | 1 | NC           | Not connect  |
-| 7 |             |               | 8 |              |              |
+| 17| NC          | Not connect   | 18| NC           | Not connect  |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.13 WiFi&Bluetooth (U11)
@@ -887,32 +809,21 @@ stream in 802.11n draft, 54Mbps as specified in 802.11g, or 11Mbps for
 Features
 
 -  802.11b/g/n single-band radio
-
 -  Bluetooth V4.0(HS) with integrated Class 1.5 PA and Low Energy (BLE)
    support
-
 -  Concurrent Bluetooth, WLAN operation
-
 -  Simultaneous BT/WLAN receive with single antenna
-
 -  WLAN host interface options:
-
 - SDIO v2.0 — up to 50 MHz clock rate
-
 -  BT host digital interface:
-
 - UART (up to 4 Mbps)
-
 -  IEEE Co-existence technologies are integrated die solution
-
 -  ECI — enhanced coexistence support, ability to coordinate BT SCO
    transmissions around WLAN receives
 
 +---+--------------+----------------+---+------------+---------------+
-| P | Signal       | Description    | P | Signal     | Description   |
-| i |              |                | i |            |               |
-| n |              |                | n |            |               |
-+===+==============+================+===+============+===============+
+|Pin| Signal       | Description    |Pin| Signal     | Description   |
++---+--------------+----------------+---+------------+---------------+
 | 1 | GND          | Ground         | 2 | WL_BT_ANT  | RF I/O        |
 +---+--------------+----------------+---+------------+---------------+
 | 3 | GND          | Ground         | 4 | NC         | Not connect   |
@@ -925,68 +836,57 @@ Features
 |   |              | device to      |   |            |               |
 |   |              | wake-up HOST   |   |            |               |
 +---+--------------+----------------+---+------------+---------------+
-| 9 | VBAT_WL      | Main power     | 1 | XTAL_IN    | Crystal input |
-|   |              | voltage source | 0 |            |               |
+| 9 | VBAT_WL      | Main power     | 10| XTAL_IN    | Crystal input |
+|   |              | voltage source |   |            |               |
 |   |              | input          |   |            |               |
 +---+--------------+----------------+---+------------+---------------+
-| 1 | XTAL_OUT     | Crystal output | 1 | W          | Internal      |
-| 1 |              |                | 2 | IFI_REG_ON | regulators    |
+| 11| XTAL_OUT     | Crystal output | 12| W          | Internal      |
+|   |              |                |   | IFI_REG_ON | regulators    |
 |   |              |                |   |            | power enable  |
 |   |              |                |   |            | / disable     |
 +---+--------------+----------------+---+------------+---------------+
-| 1 | WI           | External       | 1 | WIFI_D2    | WiFi data     |
-| 3 | FI_HOST_WAKE | Interrupt      | 4 |            |               |
+| 13| WI           | External       | 14| WIFI_D2    | WiFi data     |
+|   | FI_HOST_WAKE | Interrupt      |   |            |               |
 |   |              | Input / Keypad |   |            |               |
 |   |              | input          |   |            |               |
 +---+--------------+----------------+---+------------+---------------+
-| 1 | WIFI_D3      | WiFi data      | 1 | WIFI_CMD   | WiFi command  |
-| 5 |              |                | 6 |            |               |
+| 15| WIFI_D3      | WiFi data      | 16| WIFI_CMD   | WiFi command  |
 +---+--------------+----------------+---+------------+---------------+
-| 1 | WIFI_CLK     | WiFi clock     | 1 | WIFI_D0    | WiFi data     |
-| 7 |              |                | 8 |            |               |
+| 17| WIFI_CLK     | WiFi clock     | 18| WIFI_D0    | WiFi data     |
 +---+--------------+----------------+---+------------+---------------+
-| 1 | WIFI_D1      | WiFi data      | 2 | GND        | Ground        |
-| 9 |              |                | 0 |            |               |
+| 19| WIFI_D1      | WiFi data      | 20| GND        | Ground        |
 +---+--------------+----------------+---+------------+---------------+
-| 2 | VIN_LDO_OUT  | Internal Buck  | 2 | VCCIO_WL   | I/O Voltage   |
-| 1 |              | voltage        | 2 |            | supply input  |
+| 21| VIN_LDO_OUT  | Internal Buck  | 22| VCCIO_WL   | I/O Voltage   |
+|   |              | voltage        |   |            | supply input  |
 |   |              | generation pin |   |            |               |
 +---+--------------+----------------+---+------------+---------------+
-| 2 | VIN_LDO      | Internal Buck  | 2 | LPO        | External Low  |
-| 3 |              | voltage        | 4 |            | Power Clock   |
+| 23| VIN_LDO      | Internal Buck  | 24| LPO        | External Low  |
+|   |              | voltage        |   |            | Power Clock   |
 |   |              | generation pin |   |            | input         |
 |   |              |                |   |            | (32.768KHz)   |
 +---+--------------+----------------+---+------------+---------------+
-| 2 | NC           | Not connect    | 2 | NC         | Not connect   |
-| 5 |              |                | 6 |            |               |
+| 25| NC           | Not connect    | 26| NC         | Not connect   |
 +---+--------------+----------------+---+------------+---------------+
-| 2 | NC           | Not connect    | 2 | NC         | Not connect   |
-| 7 |              |                | 8 |            |               |
+| 27| NC           | Not connect    | 28| NC         | Not connect   |
 +---+--------------+----------------+---+------------+---------------+
-| 2 | NC           | Not connect    | 3 | NC         | Not connect   |
-| 9 |              |                | 0 |            |               |
+| 29| NC           | Not connect    | 30| NC         | Not connect   |
 +---+--------------+----------------+---+------------+---------------+
-| 3 | GND          | Ground         | 3 | NC         | Not connect   |
-| 1 |              |                | 2 |            |               |
+| 31| GND          | Ground         | 32| NC         | Not connect   |
 +---+--------------+----------------+---+------------+---------------+
-| 3 | GND          | Ground         | 3 | BT_RST     | Bluetooth     |
-| 3 |              |                | 4 |            | reset         |
+| 33| GND          | Ground         | 34| BT_RST     | Bluetooth     |
 +---+--------------+----------------+---+------------+---------------+
-| 3 | NC           | Not connect    | 3 | GND        | Ground        |
-| 5 |              |                | 6 |            |               |
+| 35| NC           | Not connect    | 36| GND        | Ground        |
 +---+--------------+----------------+---+------------+---------------+
-| 3 | NC           | Not connect    | 3 | NC         | Not connect   |
-| 7 |              |                | 8 |            |               |
+| 37| NC           | Not connect    | 38| NC         | Not connect   |
 +---+--------------+----------------+---+------------+---------------+
-| 3 | NC           | Not connect    | 4 | NC         | Not connect   |
-| 9 |              |                | 0 |            |               |
+| 39| NC           | Not connect    | 40| NC         | Not connect   |
 +---+--------------+----------------+---+------------+---------------+
-| 4 | UART0_CTS    | Bluetooth UART | 4 | UART0_RX   | Bluetooth     |
-| 1 |              | interface      | 2 |            | UART          |
+| 41| UART0_CTS    | Bluetooth UART | 42| UART0_RX   | Bluetooth     |
+|   |              | interface      |   |            | UART          |
 |   |              |                |   |            | interface     |
 +---+--------------+----------------+---+------------+---------------+
-| 4 | UART0_TX     | Bluetooth UART | 4 | UART0_RTS  | Bluetooth     |
-| 3 |              | interface      | 4 |            | UART          |
+| 43| UART0_TX     | Bluetooth UART | 44| UART0_RTS  | Bluetooth     |
+|   |              | interface      |   |            | UART          |
 |   |              |                |   |            | interface     |
 +---+--------------+----------------+---+------------+---------------+
 
@@ -1000,21 +900,19 @@ The debug serial port (UART2) is used to connect PC and board with the
 USB-to-serial cable (CP2102).
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | UART2_RX    | UART2 receive | 2 | UART2_TX     | UART2        |
 |   |             |               |   |              | transmit     |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | GND         | Ground        |   |              |              |
+| 3 | GND         | Ground        |                                 |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.15 GPIO (CON4)
 ^^^^^^^^^^^^^^^^^^^
 
 The GPIO is a 40-pin header connector. The pins can be defined as data
-input / output.
+input/output.
 
 .. image:: image/23-EM3288_GPIO.gif
     :align: center
@@ -1022,9 +920,7 @@ input / output.
 +---+-------------+---------------+---+--------------+--------------+
 | GPIO (CON4)                                                       |
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | ADC2_IN     | ADC2 input    | 2 | ADC0_IN      | ADC0 input   |
 +---+-------------+---------------+---+--------------+--------------+
@@ -1041,71 +937,65 @@ input / output.
 |   | CTSn/TS0_D2 | to send/ TSI  |   |              | synchronizer |
 |   |             | data2         |   |              | signal       |
 +---+-------------+---------------+---+--------------+--------------+
-| 9 | UART        | UART1         | 1 | UART1        | UART1        |
-|   | 1_RX/TS0_D0 | receive/ TSI  | 0 | _RTSn/TS0_D3 | r            |
-|   |             | data0         |   |              | eady-to-send |
-|   |             |               |   |              | output/ TSI  |
+| 9 | UART        | UART1         | 10| UART1        | UART1        |
+|   | 1_RX/TS0_D0 | receive/ TSI  |   | _RTSn/TS0_D3 | ready-to-send|
+|   |             | data0         |   |              | output/ TSI  |
 |   |             |               |   |              | data3        |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | TS0_CLK     | TSI reference | 1 | UAR          | UART1        |
-| 1 |             | clock         | 2 | T1_TX/TS0_D1 | transmit/    |
+| 11| TS0_CLK     | TSI reference | 12| UAR          | UART1        |
+|   |             | clock         |   | T1_TX/TS0_D1 | transmit/    |
 |   |             |               |   |              | TSI data1    |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | TS0_ERR     | TSI fail      | 1 | TS0_VALID    | TSI valid    |
-| 3 |             | signal        | 4 |              | signal       |
+| 13| TS0_ERR     | TSI fail      | 14| TS0_VALID    | TSI valid    |
+|   |             | signal        |   |              | signal       |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | I2C3_SCL    | I2C3 serial   | 1 | I2C3_SDA     | I2C3 serial  |
-| 5 |             | clock         | 6 |              | data         |
+| 15| I2C3_SCL    | I2C3 serial   | 16| I2C3_SDA     | I2C3 serial  |
+|   |             | clock         |   |              | data         |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | CIF_CLKOUT  | Camera0       | 1 | CIF_CLKIN    | Camera0      |
-| 7 |             | interface     | 8 |              | interface    |
+| 17| CIF_CLKOUT  | Camera0       | 18| CIF_CLKIN    | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | output work   |   |              | input pixel  |
 |   |             | clock         |   |              | clock        |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | CIF_HREF    | Camera0       | 2 | CIF_VSYNC    | Camera0      |
-| 9 |             | interface     | 0 |              | interface    |
+| 19| CIF_HREF    | Camera0       | 20| CIF_VSYNC    | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | horizontal    |   |              | vertical     |
 |   |             | sync signal   |   |              | sync signal  |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | GPIO1_B7    | GPIO          | 2 | GPIO1_B6     | GPIO         |
-| 1 |             |               | 2 |              |              |
+| 21| GPIO1_B7    | GPIO          | 22| GPIO1_B6     | GPIO         |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | CIF_D9      | Camera0       | 2 | CIF_D8       | Camera0      |
-| 3 |             | interface     | 4 |              | interface    |
+| 23| CIF_D9      | Camera0       | 24| CIF_D8       | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | input pixel   |   |              | input pixel  |
 |   |             | data9         |   |              | data8        |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | CIF_D7      | Camera0       | 2 | CIF_D6       | Camera0      |
-| 5 |             | interface     | 6 |              | interface    |
+| 25| CIF_D7      | Camera0       | 26| CIF_D6       | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | input pixel   |   |              | input pixel  |
 |   |             | data7         |   |              | data6        |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | CIF_D5      | Camera0       | 2 | CIF_D4       | Camera0      |
-| 7 |             | interface     | 8 |              | interface    |
+| 27| CIF_D5      | Camera0       | 28| CIF_D4       | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | input pixel   |   |              | input pixel  |
 |   |             | data5         |   |              | data4        |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | CIF_D3      | Camera0       | 3 | CIF_D2       | Camera0      |
-| 9 |             | interface     | 0 |              | interface    |
+| 29| CIF_D3      | Camera0       | 30| CIF_D2       | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | input pixel   |   |              | input pixel  |
 |   |             | data3         |   |              | data2        |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | CIF_D1      | Camera0       | 3 | CIF_D0       | Camera0      |
-| 1 |             | interface     | 2 |              | interface    |
+| 31| CIF_D1      | Camera0       | 32| CIF_D0       | Camera0      |
+|   |             | interface     |   |              | interface    |
 |   |             | input pixel   |   |              | input pixel  |
 |   |             | data1         |   |              | data0        |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | GND         | Ground        | 3 | GND          | Ground       |
-| 3 |             |               | 4 |              |              |
+| 33| GND         | Ground        | 34| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | VCC_IO      | 3.3V          | 3 | VCC_IO       | 3.3V         |
-| 5 |             |               | 6 |              |              |
+| 35| VCC_IO      | 3.3V          | 36| VCC_IO       | 3.3V         |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | GND         | Ground        | 3 | GND          | Ground       |
-| 7 |             |               | 8 |              |              |
+| 37| GND         | Ground        | 38| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | VCC5V       | 5V            | 4 | VCC5V        | 5V           |
-| 9 |             |               | 0 |              |              |
+| 39| VCC5V       | 5V            | 40| VCC5V        | 5V           |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.15 Control (J2)
@@ -1118,14 +1008,11 @@ signals are transmitted directly to the CPU.
   :align: center
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | VCC_IO      | 3.3V          | 2 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 3 | KEY_IN      | Recover key   | 4 | PWR_KEY      | Power key    |
-|   |             | in            |   |              |              |
+| 3 | KEY_IN      | Recover key in| 4 | PWR_KEY      | Power key    |
 +---+-------------+---------------+---+--------------+--------------+
 | 5 | GND         | Ground        | 6 | IR_IN        | IR in        |
 +---+-------------+---------------+---+--------------+--------------+
@@ -1143,14 +1030,11 @@ Short press K1 is sleep/wake up and long press is reboot.
 The K2 is used for download combined with OTG
 
 +---+---------+-------------------+-----+------------+--------------+
-| K | Signal  | Description       | Key | Signal     | Description  |
-| e |         |                   |     |            |              |
-| y |         |                   |     |            |              |
+|Key| Signal  | Description       | Key | Signal     | Description  |
 +---+---------+-------------------+-----+------------+--------------+
-| K | PWR-KEY | Short: Sleep/Wake | K2  | RECOVER    | Download     |
-| 1 |         | up                |     |            | mode         |
-|   |         |                   |     |            |              |
-|   |         | Long: Reboot      |     |            |              |
+| K1| PWR-KEY |Short: Sleep/Wake  | K2  | RECOVER    | Download     |
+|   |         | up                |     |            | mode         |
+|   |         |Long: Reboot       |     |            |              |
 +---+---------+-------------------+-----+------------+--------------+
 
 2.17 4G (CON2)
@@ -1165,17 +1049,11 @@ networks.
 **4G (EC20) Technical Specifications**
 
 -  Form Factor: PCI Express Mini Card
-
 -  Size: 51 x 30 x 4.9mm
-
 -  Weight: 9.8g
-
 -  Bandwidth: 1.4/3/5/10/15/20MHz
-
 -  Temperature Range: -40°C ~ +80°C
-
 -  Supply Voltage: 3.0V~3.6V, 3.3V Typical
-
 -  3GPP TS27.007 and Enhanced AT Commands
 
 .. image:: image/26-PCIe.gif
@@ -1185,46 +1063,33 @@ networks.
 +---+-----------+---+------------+---+------------+---+--------------+
 | 4G Connector (CON2)                                                |
 +---+-----------+---+------------+---+------------+---+--------------+
-| P | Signal    | P | Signal     | P | Signal     | P | Signal       |
-| i |           | i |            | i |            | i |              |
-| n |           | n |            | n |            | n |              |
+|Pin| Signal    | P | Signal     |Pin| Signal     | P | Signal       |
 +---+-----------+---+------------+---+------------+---+--------------+
 | 1 | NC        | 2 | 3GVCC      | 3 | NC         | 4 | GND          |
 +---+-----------+---+------------+---+------------+---+--------------+
 | 5 | NC        | 6 | NC         | 7 | NC         | 8 | SIM_VCC      |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 9 | GND       | 1 | SIM_DATA   | 1 | NC         | 1 | SIM_CLK      |
-|   |           | 0 |            | 1 |            | 2 |              |
+| 9 | GND       | 10| SIM_DATA   | 11| NC         | 12| SIM_CLK      |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 1 | NC        | 1 | SIM_RST    | 1 | GND        | 1 | NC           |
-| 3 |           | 4 |            | 5 |            | 6 |              |
+| 13| NC        | 14| SIM_RST    | 15| GND        | 16| NC           |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 1 | NC        | 1 | GND        | 1 | NC         | 2 | 3GVCC        |
-| 7 |           | 8 |            | 9 |            | 0 |              |
+| 17| NC        | 18| GND        | 19| NC         | 20| 3GVCC        |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 2 | GND       | 2 | 3G_PWEN    | 2 | NC         | 2 | 3GVCC        |
-| 1 |           | 2 |            | 3 |            | 4 |              |
+| 21| GND       | 22| 3G_PWEN    | 23| NC         | 24| 3GVCC        |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 2 | NC        | 2 | GND        | 2 | GND        | 2 | NC           |
-| 5 |           | 6 |            | 7 |            | 8 |              |
+| 25| NC        | 26| GND        | 27| GND        | 28| NC           |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 2 | GND       | 3 | NC         | 3 | NC         | 3 | NC           |
-| 9 |           | 0 |            | 1 |            | 2 |              |
+| 29| GND       | 30| NC         | 31| NC         | 32| NC           |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 3 | NC        | 3 | GND        | 3 | GND        | 3 | USB_DM1      |
-| 3 |           | 4 |            | 5 |            | 6 |              |
+| 33| NC        | 34| GND        | 35| GND        | 36| USB_DM1      |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 3 | GND       | 3 | USB_DP1    | 3 | 3GVCC      | 4 | GND          |
-| 7 |           | 8 |            | 9 |            | 0 |              |
+| 37| GND       | 38| USB_DP1    | 39| 3GVCC      | 40| GND          |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 4 | 3GVCC     | 4 | LED_WWAN   | 4 | GND        | 4 | NC           |
-| 1 |           | 2 |            | 3 |            | 4 |              |
+| 41| 3GVCC     | 42| LED_WWAN   | 43| GND        | 44| NC           |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 4 | NC        | 4 | NC         | 4 | NC         | 4 | NC           |
-| 5 |           | 6 |            | 7 |            | 8 |              |
+| 45| NC        | 46| NC         | 47| NC         | 48| NC           |
 +---+-----------+---+------------+---+------------+---+--------------+
-| 4 | NC        | 5 | GND        | 5 | NC         | 5 | LED_RED.     |
-| 9 |           | 0 |            | 1 |            | 2 | 3.3V         |
+| 49| NC        | 50| GND        | 51| NC         | 52| LED_RED. 3.3V|
 +---+-----------+---+------------+---+------------+---+--------------+
 
 .. image:: image/28-SIM.gif
@@ -1237,12 +1102,9 @@ SIM Card and can be used for wireless transmission with a 3G/4G module.
 +---+----------+-----------------+---+---------+---------------------+                                
 | SIM Card slot (P4)                                                 |
 +---+----------+-----------------+---+---------+---------------------+
-| P | Signal   | Description     | P | Signal  | Description         |
-| i |          |                 | i |         |                     |
-| n |          |                 | n |         |                     |
+|Pin| Signal   | Description     |Pin| Signal  | Description         |
 +---+----------+-----------------+---+---------+---------------------+
-| 1 | SIM_CLK  | Clock           | 2 | S       | send/receive data   |
-|   |          |                 |   | IM_DATA |                     |
+| 1 | SIM_CLK  | Clock           | 2 | SIM_DATA| send/receive data   |
 +---+----------+-----------------+---+---------+---------------------+
 | 3 | SIM_RST  | Reset           | 4 | SIM_VCC | DC power supply     |
 +---+----------+-----------------+---+---------+---------------------+
@@ -1274,9 +1136,7 @@ disk, not desktop hard disk.
 +---+-------------+---------------+---+--------------+--------------+
 | SATA Connector (J14)                                              |
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | GND         | Ground        | 2 | SATA_TXP     | Transmit +   |
 +---+-------------+---------------+---+--------------+--------------+
@@ -1284,7 +1144,7 @@ disk, not desktop hard disk.
 +---+-------------+---------------+---+--------------+--------------+
 | 5 | SATA_RXN    | Receive -     | 6 | SATA_RXP     | Receive +    |
 +---+-------------+---------------+---+--------------+--------------+
-| 7 | GND         | Ground        |   |              |              |
+| 7 | GND         | Ground        |                                 |
 +---+-------------+---------------+---+--------------+--------------+
 
 .. image:: image/7-DC-SATA.gif
@@ -1293,12 +1153,9 @@ disk, not desktop hard disk.
 +---+-------------+---------------+---+--------------+--------------+
 | SATA Power (J18)                                                  |
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | SATA_5V     | SATA power.   | 2 | GND          | Ground       |
-|   |             | DC 5V         |   |              |              |
+| 1 | SATA_5V     |SATA power.DC5V| 2 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.19 RTC (BT1)
