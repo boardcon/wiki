@@ -12,7 +12,6 @@ SBC user manual
    :caption: Hardware
 
    introduction
-   peripherals
    configuration
    
 .. toctree::
