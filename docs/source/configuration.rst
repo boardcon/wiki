@@ -1,5 +1,5 @@
-Configuration
-==============
+Product Configuration
+=====================
 
 1 Standard Contents
 ---------------------
