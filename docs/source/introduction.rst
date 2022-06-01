@@ -1408,6 +1408,7 @@ disk, not desktop hard disk.
 +---+-------------+---------------+---+--------------+--------------+
 
 .. image:: image/7-DC-SATA.gif
+   :align: center
 
 +---+-------------+---------------+---+--------------+--------------+
 | SATA Power (J18)                                                  |
@@ -1423,7 +1424,7 @@ disk, not desktop hard disk.
 2.19 RTC (BT1)
 ^^^^^^^^^^^^^^^^^^^
 
-.. image:: image/31-RTC.png
+.. image:: image/31-RTC.gif
 
 The backup battery (3V) is used to ensure the RTC (frequency 32.768KHz)
 is still able to work after power off. Lithium cell model: CR1220.
