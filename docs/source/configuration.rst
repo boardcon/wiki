@@ -11,8 +11,8 @@ Product Configuration
 | 1  | EM3288 board | 1    | Standard Content (2GB RAM, 4GB eMMC,     |
 |    |              |      | WiFi&BT)                                 |
 +----+--------------+------+------------------------------------------+
-| 2  | TF Card /    | 1    | Android BSP, Ubuntu BSP, Documents,      |
-|    | CD-ROM       |      | tools, Schematic Drawing, Datasheets     |
+| 2  | TF Card      | 1    | Android BSP, Ubuntu BSP, Documents,      |
+|    |              |      | tools, Schematic Drawing, Datasheets     |
 +----+--------------+------+------------------------------------------+
 | 3  | Ethernet     | 1    |                                          |
 |    | cable        |      |                                          |
@@ -37,7 +37,7 @@ Product Configuration
 +-----+-------------+--------------------------------------------------+
 | 3   | GPS         | Ublox 7 low power consumption GPS Chipset        |
 +-----+-------------+--------------------------------------------------+
-| 4   | SATA        |                                                  |
+| 4   | SATA        | SATA3.0                                          |
 +-----+-------------+--------------------------------------------------+
 | 5   | LCD         | 10.1-inch LVDS, 1280 x 800                       |
 +-----+-------------+--------------------------------------------------+
