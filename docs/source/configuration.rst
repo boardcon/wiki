@@ -5,8 +5,8 @@ Product Configuration
 ---------------------
 
 +----+--------------+------+------------------------------------------+
-| NO.|   Item       |  Qty.|   Description                            |
-|    |              | (PCS)|                                          |
+| NO.|   Item       |Qty.  |   Description                            |
+|    |              |(PCS) |                                          |
 +====+==============+======+==========================================+
 | 1  | EM3288 board | 1    | Standard Content (2GB RAM, 4GB eMMC,     |
 |    |              |      | WiFi&BT)                                 |
