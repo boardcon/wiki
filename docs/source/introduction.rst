@@ -156,14 +156,9 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 **Pin Definition**
 
 +---+-----------+----+-------------+----+-----------+----+----------+
-| P | Signal    | P  | Signal      | P  | Signal    | P  | Signal   |
-| i |           | in |             | in |           | in |          |
-| n |           |    |             |    |           |    |          |
-|   |           | (J |             | (J |           | (J |          |
-| ( |           | 1) |             | 2) |           | 2) |          |
-| J |           |    |             |    |           |    |          |
-| 1 |           |    |             |    |           |    |          |
-| ) |           |    |             |    |           |    |          |
+|Pin| Signal    | Pin| Signal      | Pin| Signal    | Pin| Signal   |
+|(J |           | (J |             | (J |           | (J |          |
+| 1)|           | 1) |             | 2) |           | 2) |          |
 +===+===========+====+=============+====+===========+====+==========+
 | 1 | TX_C      | 51 | MIP         | 1  | VCC_SYS   | 51 | SPI0_U   |
 |   |           |    | I_TX/RX_D2P |    |           |    | ART4_RXD |
@@ -189,17 +184,14 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 9 | TX_1+     | 59 | GND         | 9  | MDI1-     | 59 | TS0_CLK  |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | TX_2+     | 60 | CIF_D1      | 10 | IR_INT    | 60 | T        |
-| 0 |           |    |             |    |           |    | S0_VALID |
+| 10| TX_2+     | 60 | CIF_D1      | 10 | IR_INT    | 60 | TS0_VALID|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | HDMI_HPD  | 61 | CIF_D0      | 11 | MDI2+     | 61 | TS0_ERR  |
-| 1 |           |    |             |    |           |    |          |
+| 11| HDMI_HPD  | 61 | CIF_D0      | 11 | MDI2+     | 61 | TS0_ERR  |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | HDMI_CEC  | 62 | CIF_D3      | 12 | MDI3+     | 62 | GP       |
-| 2 |           |    |             |    |           |    | IO7_B4_U |
+| 12| HDMI_CEC  | 62 | CIF_D3      | 12 | MDI3+     | 62 |GPIO7_B4_U|
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 1 | I2C5      | 63 | CIF_D2      | 13 | MDI2-     | 63 | S        |
-| 3 | _SDA_HDMI |    |             |    |           |    | DMMC_CLK |
+| 13| I2C5      | 63 | CIF_D2      | 13 | MDI2-     | 63 | S        |
+|   | _SDA_HDMI |    |             |    |           |    | DMMC_CLK |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 1 | I2C5      | 64 | CIF_D5      | 14 | MDI3-     | 64 | GND      |
 | 4 | _SCL_HDMI |    |             |    |           |    |          |
@@ -249,11 +241,11 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | 2 | LC        | 79 | GPIO0_B2_D  | 29 | SPI2_CLK  | 79 | I2S      |
 | 9 | D_D9_LD4N |    |             |    |           |    | _LRCK_TX |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD_      | 80 | GPIO7_A3_D  | 30 | SP2I_CSn0 | 80 | I2S_SDO0 |
-| 0 | D10_LCK0P |    |             |    |           |    |          |
+| 3 | LCD_D10   | 80 | GPIO7_A3_D  | 30 | SP2I_CSn0 | 80 | I2S_SDO0 |
+| 0 | _LCK0P    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 3 | LCD_      | 81 | GPIO7_A6_U  | 31 | SPI2_RXD  | 81 | 2S_SDO1  |
-| 1 | D11_LCK0N |    |             |    |           |    |          |
+| 3 | LCD_D11   | 81 | GPIO7_A6_U  | 31 | SPI2_RXD  | 81 | 2S_SDO1  |
+| 1 | _LCK0N    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 3 | LCD       | 82 | GPIO0_A6_U  | 32 | SPI2_TXD  | 82 | I2S_SDO2 |
 | 2 | _D12_LD5P |    |             |    |           |    |          |
@@ -285,32 +277,32 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | 4 | LCD       | 91 | VCCIO_SD    | 41 | OTG_DP    | 91 | UART2_RX |
 | 1 | _D21_LD9N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | LCD_      | 92 | ADC2_IN     | 42 | OTG_ID    | 92 | I2C4_SCL |
-| 2 | D22_LCK1P |    |             |    |           |    |          |
+| 4 | LCD_D22   | 92 | ADC2_IN     | 42 | OTG_ID    | 92 | I2C4_SCL |
+| 2 | _LCK1P    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | LCD_      | 93 | VCC_CAM     | 43 | HOST1_DM  | 93 | UART3_RX |
-| 3 | D23_LCK1N |    |             |    |           |    |          |
+| 4 | LCD_D23   | 93 | VCC_CAM     | 43 | HOST1_DM  | 93 | UART3_RX |
+| 3 |    _LCK1N |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 4 | GND       | 94 | VCCA_33     | 44 | OTG_DET   | 94 | UART2_TX |
 | 4 |           |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_T    | 95 | VCC_18      | 45 | HOST1_DP  | 95 | UA       |
-| 5 | X/RX_CLKN |    |             |    |           |    | RT3_RTSn |
+| 4 | MIPI_TX/RX| 95 | VCC_18      | 45 | HOST1_DP  | 95 | UA       |
+| 5 | _CLKN     |    |             |    |           |    | RT3_RTSn |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_     | 96 | VCC_RTC     | 46 | HOST2_DM  | 96 | UART3_TX |
-| 6 | TX/RX_D0P |    |             |    |           |    |          |
+| 4 | MIPI_TX/RX| 96 | VCC_RTC     | 46 | HOST2_DM  | 96 | UART3_TX |
+| 6 | _D0P      |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 4 | MIPI_T    | 97 | VCC_IO      | 47 | SPI0_CSn0 | 97 | PWM1     |
 | 7 | X/RX_CLKP |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_     | 98 | GND         | 48 | HOST2_DP  | 98 | UA       |
-| 8 | TX/RX_D0N |    |             |    |           |    | RT3_CTSn |
+| 4 | MIPI_TX/RX| 98 | GND         | 48 | HOST2_DP  | 98 | UA       |
+| 8 | _D0N      |    |             |    |           |    | RT3_CTSn |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 4 | MIPI_     | 99 | VCC_IO      | 49 | SPI0_CLK  | 99 | PWR_KEY  |
-| 9 | TX/RX_D2N |    |             |    |           |    |          |
+| 4 |MIPI_TX/RX | 99 | VCC_IO      | 49 | SPI0_CLK  | 99 | PWR_KEY  |
+| 9 |_D2N       |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
-| 5 | MIPI_     | 1  | GND         | 50 | GND       | 1  | GP       |
-| 0 | TX/RX_D1N | 00 |             |    |           | 00 | IO7_C5_D |
+| 5 | MIPI_TX/RX| 1  | GND         | 50 | GND       | 1  | GP       |
+| 0 | _D1N      | 00 |             |    |           | 00 | IO7_C5_D |
 +---+-----------+----+-------------+----+-----------+----+----------+
 
 2 Peripherals Introduction
@@ -327,9 +319,7 @@ EM3288 Power Supply – 5V DC power supply or external Li+ battery
     :align: center
     
 +---+--------+---------------------------+---+--------+--------------+
-| P | Signal | Description               | P | Signal | Description  |
-| i |        |                           | i |        |              |
-| n |        |                           | n |        |              |
+|Pin| Signal | Description               |Pin| Signal | Description  |
 +---+--------+---------------------------+---+--------+--------------+
 | 1 | VDD5V  | Main power supply. DC 5V  | 2 | GND    | Ground       |
 |   |        | power in                  |   |        |              |
@@ -346,9 +336,7 @@ interface that function not supported currently.**
     :align: center
     
 +---+--------+----------------+---+------+---------------------------+
-| P | Signal | Description    | P | Si   | Description               |
-| i |        |                | i | gnal |                           |
-| n |        |                | n |      |                           |
+|Pin| Signal | Description    |Pin|Signal| Description               |
 +---+--------+----------------+---+------+---------------------------+
 | 1 | GND    | Ground         | 2 | VBAT | Li-Battery                |
 +---+--------+----------------+---+------+---------------------------+
@@ -372,9 +360,7 @@ the Ethernet chip. RJ45 connector
 -  Supports IEEE 802.1Q VLAN tag detection for reception frames
 
 +---+---------+--------------------+---+--------+--------------------+
-| P | Signal  | Description        | P | Signal | Description        |
-| i |         |                    | i |        |                    |
-| n |         |                    | n |        |                    |
+|Pin| Signal  | Description        |Pin| Signal | Description        |
 +---+---------+--------------------+---+--------+--------------------+
 | 1 | COM     | Common             | 2 | MDI0P  | Bi-directional     |
 |   |         |                    |   |        | transmit/receive   |
@@ -392,18 +378,15 @@ the Ethernet chip. RJ45 connector
 |   |         | transmit/receive   |   |        | transmit/receive   |
 |   |         | pair 1             |   |        | pair 3             |
 +---+---------+--------------------+---+--------+--------------------+
-| 9 | MDI3N   | Bi-directional     | 1 | GND    | Ground             |
-|   |         | transmit/receive   | 0 |        |                    |
+| 9 | MDI3N   | Bi-directional     | 10| GND    | Ground             |
+|   |         | transmit/receive   |   |        |                    |
 |   |         | pair 3             |   |        |                    |
 +---+---------+--------------------+---+--------+--------------------+
-| 1 | VCC_LAN | 3.3V               | 1 | LINK   | Detect link        |
-| 1 |         |                    | 2 |        |                    |
+| 11| VCC_LAN | 3.3V               | 12| LINK   | Detect link        |
 +---+---------+--------------------+---+--------+--------------------+
-| 1 | GND     | Ground             | 1 | SPEED  | Detect speed       |
-| 3 |         |                    | 4 |        |                    |
+| 13| GND     | Ground             | 14| SPEED  | Detect speed       |
 +---+---------+--------------------+---+--------+--------------------+
-| 1 | GND     | Ground             | 1 | GND    | Ground             |
-| 5 |         |                    | 6 |        |                    |
+| 15| GND     | Ground             | 16| GND    | Ground             |
 +---+---------+--------------------+---+--------+--------------------+
 
 2.3 USB HOST (P2, P3)
@@ -433,9 +416,7 @@ is designed to work with USB host as a high-speed hub.
 +---+---------+--------------------+---+--------+--------------------+
 | Single Host (P2)                                                   |
 +---+---------+--------------------+---+--------+--------------------+
-| P | Signal  | Description        | P | Signal | Description        |
-| i |         |                    | i |        |                    |
-| n |         |                    | n |        |                    |
+|Pin| Signal  | Description        |Pin| Signal | Description        |
 +---+---------+--------------------+---+--------+--------------------+
 | 1 | VCC_5V  | USB Power. DC 5V   | 2 | U      | USB data-          |
 |   |         |                    |   | SB_DM2 |                    |
@@ -444,7 +425,7 @@ is designed to work with USB host as a high-speed hub.
 +---+---------+--------------------+---+--------+--------------------+
 | 5 | GND     | Ground             | 6 | GND    | Ground             |
 +---+---------+--------------------+---+--------+--------------------+
-| 7 | GND     | Ground             |   |        |                    |
+| 7 | GND     | Ground             |                                 |
 +---+---------+--------------------+---+--------+--------------------+
 
 .. image:: image/10-2xUSB-AF.gif
@@ -453,9 +434,7 @@ is designed to work with USB host as a high-speed hub.
 +---+-------------+---------------+---+--------------+--------------+
 | Dual-USB Host (P3)                                                |
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | VCC_USB     | USB Power. DC | 2 | USB_DM3      | USB data-    |
 |   |             | 5V            |   |              |              |
@@ -467,11 +446,9 @@ is designed to work with USB host as a high-speed hub.
 +---+-------------+---------------+---+--------------+--------------+
 | 7 | USB_DP4     | USB Data+     | 8 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 9 | GND         | Ground        | 1 | GND          | Ground       |
-|   |             |               | 0 |              |              |
+| 9 | GND         | Ground        | 10| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | GND         | Ground        | 1 | GND          | Ground       |
-| 1 |             |               | 2 |              |              |
+| 11| GND         | Ground        | 12| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.4 USB OTG (J8)
@@ -497,16 +474,14 @@ transfer file.
     :align: center
     
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | OTG_DET     | OTG detection | 2 | OTG_DM       | OTG data -   |
 +---+-------------+---------------+---+--------------+--------------+
 | 3 | OTG_DP      | OTG data+     | 4 | OTG_ID       | OTG ID       |
 |   |             |               |   |              | indicator    |
 +---+-------------+---------------+---+--------------+--------------+
-| 5 | GND         | Ground        |   |              |              |
+| 5 | GND         | Ground        |                                 |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.5 Micro SD (J1)
@@ -521,9 +496,7 @@ hot-plug.
     :align: center
     
 +---+------------+-----------------+---+--------------+--------------+
-| P | Signal     | Description     | P | Signal       | Description  |
-| i |            |                 | i |              |              |
-| n |            |                 | n |              |              |
+|Pin| Signal     | Description     |Pin| Signal       | Description  |
 +---+------------+-----------------+---+--------------+--------------+
 | 1 | SDMMC_D2   | SD/MMC data2    | 2 | SDMMC_D3     | SD/MMC data3 |
 +---+------------+-----------------+---+--------------+--------------+
@@ -534,8 +507,8 @@ hot-plug.
 +---+------------+-----------------+---+--------------+--------------+
 | 7 | SDMMC_D0   | SD/MMC data0    | 8 | SDMMC_D1     | SD/MMC data1 |
 +---+------------+-----------------+---+--------------+--------------+
-| 9 | SDMMC_DET  | SD/MMC detect   |   |              |              |
-|   |            | signal          |   |              |              |
+| 9 | SDMMC_DET  | SD/MMC detect   |                                 |
+|   |            | signal          |                                 |
 +---+------------+-----------------+---+--------------+--------------+
 
 2.6 HDMI (PH1)
@@ -549,9 +522,7 @@ the regular 19pins HDMI type A, with width 13.9mm and thickness 4.45mm.
     :align: center
     
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
 | 1 | TX_2+       | HDMI data 2   | 2 | GND          | Ground       |
 |   |             | pair          |   |              |              |
@@ -564,30 +535,28 @@ the regular 19pins HDMI type A, with width 13.9mm and thickness 4.45mm.
 | 7 | TX_0+       | HDMI data 0   | 8 | GND          | Ground       |
 |   |             | pair          |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 9 | TX_0-       |               | 1 | TX_C+        | HDMI clock   |
-|   |             |               | 0 |              | pair         |
+| 9 | TX_0-       |               | 10| TX_C+        | HDMI clock   |
+|   |             |               |   |              | pair         |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | GND         | Ground        | 1 | TX_C-        |              |
-| 1 |             |               | 2 |              |              |
+| 11| GND         | Ground        | 12| TX_C-        |              |
+|   |             |               |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | HDMI_CEC    | Consumer      | 1 | NC           | Not connect  |
-| 3 |             | electronics   | 4 |              |              |
+| 13| HDMI_CEC    | Consumer      | 14| NC           | Not connect  |
+|   |             | electronics   |   |              |              |
 |   |             | control       |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | HDMI_SCL    | HDMI serial   | 1 | HDMI_SDA     | HDMI serial  |
-| 5 |             | clock         | 6 |              | data         |
+| 15| HDMI_SCL    | HDMI serial   | 16| HDMI_SDA     | HDMI serial  |
+|   |             | clock         |   |              | data         |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | GND         | Ground        | 1 | HDMI_VCC     | 5V           |
-| 7 |             |               | 8 |              |              |
+| 17| GND         | Ground        | 18| HDMI_VCC     | 5V           |
+|   |             |               |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | HDMI_HPD    | Hot Plug      | 2 | GND          | Ground       |
-| 9 |             | Detect        | 0 |              |              |
+| 19| HDMI_HPD    | Hot Plug      | 20| GND          | Ground       |
+|   |             | Detect        |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | GND         | Ground        | 2 | GND          | Ground       |
-| 1 |             |               | 2 |              |              |
+| 21| GND         | Ground        | 22| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 2 | GND         | Ground        |   |              |              |
-| 3 |             |               |   |              |              |
+| 23| GND         | Ground        |                                 |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.7 Audio I/O (J6, J7, MIC1)
@@ -612,21 +581,17 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 +---+------+----------------------+---+------+----------------------+
 | Line in (J6)                                                      |
 +---+------+----------------------+---+------+----------------------+
-| P | Si   | Description          | P | Si   | Description          |
-| i | gnal |                      | i | gnal |                      |
-| n |      |                      | n |      |                      |
+|Pin|Signal| Description          |Pin|Signal| Description          |
 +---+------+----------------------+---+------+----------------------+
 | 1 | GND  | Ground               | 2 | RIN2 | Right Channel input  |
 +---+------+----------------------+---+------+----------------------+
 | 3 | RIN2 | Right Channel input  | 4 | LIN2 | Left Channel input   |
 +---+------+----------------------+---+------+----------------------+
-| 5 | LIN2 | Left Channel input   |   |      |                      |
+| 5 | LIN2 | Left Channel input   |                                 |
 +---+------+----------------------+---+------+----------------------+
 | Audio out (J7)                                                    |
 +---+------+----------------------+---+------+----------------------+
-| P | Si   | Description          | P | Si   | Description          |
-| i | gnal |                      | i | gnal |                      |
-| n |      |                      | n |      |                      |
+|Pin|Signal| Description          |Pin|Signal| Description          |
 +---+------+----------------------+---+------+----------------------+
 | 1 | GND  | Ground               | 2 | H    | Right Channel        |
 |   |      |                      |   | P_RO | Headphone Output     |
@@ -647,12 +612,9 @@ recording.
 +---+-------------+---------------+---+--------------+--------------+
 | MIC1                                                              |
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | MIC1P       | Command       | 2 | MIC1N        | Ground       |
-|   |             | signal        |   |              |              |
+| 1 | MIC1P       | Command signal| 2 | MIC1N        | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
 
 .. Note::
@@ -670,9 +632,7 @@ EM3288 adopts standard 15-pin female VGA connector, and SDA7123
     :align: center
     
 +---+------------+----------------+---+--------------+--------------+
-| P | Signal     | Description    | P | Signal       | Description  |
-| i |            |                | i |              |              |
-| n |            |                | n |              |              |
+|Pin| Signal     | Description    |Pin| Signal       | Description  |
 +---+------------+----------------+---+--------------+--------------+
 | 1 | IOR        | Video red      | 2 | IOG          | Video green  |
 +---+------------+----------------+---+--------------+--------------+
@@ -682,17 +642,14 @@ EM3288 adopts standard 15-pin female VGA connector, and SDA7123
 +---+------------+----------------+---+--------------+--------------+
 | 7 | GND        | Ground         | 8 | GND          | Ground       |
 +---+------------+----------------+---+--------------+--------------+
-| 9 | VCC5V      | DC 5V          | 1 | GND          | Ground       |
-|   |            |                | 0 |              |              |
+| 9 | VCC5V      | DC 5V          | 10| GND          | Ground       |
 +---+------------+----------------+---+--------------+--------------+
-| 1 | NC         | Not connect    | 1 | VGA_OUT_SDA  | Serial Data  |
-| 1 |            |                | 2 |              |              |
+| 12| NC         | Not connect    | 12| VGA_OUT_SDA  | Serial Data  |
 +---+------------+----------------+---+--------------+--------------+
-| 1 | LCD_HSYNC  | LCD Horizontal | 1 | LCD_VSYNC    | LCD Vertical |
-| 3 |            | Sync           | 4 |              | Sync         |
+| 13| LCD_HSYNC  | LCD Horizontal | 14| LCD_VSYNC    | LCD Vertical |
+|   |            | Sync           |   |              | Sync         |
 +---+------------+----------------+---+--------------+--------------+
-| 1 | GND        | Ground         |   |              |              |
-| 5 |            |                |   |              |              |
+| 15| GND        | Ground         |                                 |
 +---+------------+----------------+---+--------------+--------------+
 
 2.9 LVDS (CON3)
@@ -704,52 +661,37 @@ resolution.
 **Feature**
 
 -  Comply with the TIA/EIA-644-A LVDS standard
-
 -  Combine LVTTL IO, support LVDS/LVTTL data output
-
 -  Support reference clock frequency range from 10MHz to 148.5MHz
-
 -  Support LVDS RGB 30/24/18bits color data transfer
-
 -  Support VESA/JEIDA LVDS data format transfer
-
 -  Support MSB mode and LSB mode data transfer
 
 .. image:: image/17-LVDS.gif
     :align: center
     
 +---+-----------+---+------------+---+------------+---+-------------+
-| P | Signal    | P | Signal     | P | Signal     | P | Signal      |
-| i |           | i |            | i |            | i |             |
-| n |           | n |            | n |            | n |             |
+|Pin| Signal    |Pin| Signal     |Pin| Signal     |Pin| Signal      |
 +---+-----------+---+------------+---+------------+---+-------------+
 | 1 | VCC5V     | 2 | VCC5V      | 3 | GND        | 4 | GND         |
 +---+-----------+---+------------+---+------------+---+-------------+
 | 5 | VCC_IO    | 6 | VCC_IO     | 7 | GND        | 8 | GND         |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 9 | I2C4_SCL  | 1 | I2C4_SDA   | 1 | TOUCH_RST  | 1 | TOUCH_INT   |
-|   |           | 0 |            | 1 |            | 2 |             |
+| 9 | I2C4_SCL  | 10| I2C4_SDA   | 11| TOUCH_RST  | 12| TOUCH_INT   |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 1 | LVDS_EN   | 1 | LVDS_PWM   | 1 | GND        | 1 | GND         |
-| 3 |           | 4 |            | 5 |            | 6 |             |
+| 13| LVDS_EN   | 14| LVDS_PWM   | 15| GND        | 16| GND         |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 1 | LCK1P     | 1 | LCK1N      | 1 | GND        | 2 | GND         |
-| 7 |           | 8 |            | 9 |            | 0 |             |
+| 17| LCK1P     | 18| LCK1N      | 19| GND        | 20| GND         |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 2 | LD8P      | 2 | LD8N       | 2 | LD7P       | 2 | LD7N        |
-| 1 |           | 2 |            | 3 |            | 4 |             |
+| 21| LD8P      | 22| LD8N       | 23| LD7P       | 24| LD7N        |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 2 | LD6P      | 2 | LD6N       | 2 | LD5P       | 2 | LD5N        |
-| 5 |           | 6 |            | 7 |            | 8 |             |
+| 25| LD6P      | 26| LD6N       | 27| LD5P       | 28| LD5N        |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 2 | LCK0P     | 3 | LCK0N      | 3 | GND        | 3 | GND         |
-| 9 |           | 0 |            | 1 |            | 2 |             |
+| 29| LCK0P     | 30| LCK0N      | 31| GND        | 32| GND         |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 3 | LD3P      | 3 | LD3N       | 3 | LD2P       | 3 | LD2N        |
-| 3 |           | 4 |            | 5 |            | 6 |             |
+| 33| LD3P      | 34| LD3N       | 35| LD2P       | 36| LD2N        |
 +---+-----------+---+------------+---+------------+---+-------------+
-| 3 | LD1P      | 3 | LD1N       | 3 | LD0P       | 4 | LD0N        |
-| 7 |           | 8 |            | 9 |            | 0 |             |
+| 37| LD1P      | 38| LD1N       | 39| LD0P       | 40| LD0N        |
 +---+-----------+---+------------+---+------------+---+-------------+
 
 2.10 TTL LCD (J21)
