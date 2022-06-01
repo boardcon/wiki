@@ -80,7 +80,9 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | Memory        | 512MB/1GB/2GB DDR3                                   |
 +---------------+------------------------------------------------------+
 | Storage       | – 4/8/16/32GB eMMC Flash                             |
+|               |                                                      |
 |               | – 1x SATA                                            |
+|               |                                                      |
 |               | – 1 x Micro SD                                       |
 +---------------+------------------------------------------------------+
 | Power Supply  | 5V/3A                                                |
@@ -88,21 +90,30 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | USB           | 3x USB2.0 Host, 1x USB2.0 OTG                        |
 +---------------+------------------------------------------------------+
 | Video I/O     | – HDMI 2.0 up to 3840×2160@60p                       |
+|               |                                                      |
 |               | – 40-pin header for LVDS (multiplexed with VGA)      |
+|               |                                                      |
 |               | | – VGA                                              |
-|               | | – 40-pin FPC connector for TTL LCD                 |                                          
+|               | | – 40-pin FPC connector for TTL LCD                 | 
+|               |                                                      |
 |               | – 26-pin header for MIPI Camera                      |
 +---------------+------------------------------------------------------+
 | Audio I/O     | – HDMI                                               |
+|               |                                                      |
 |               | – 3.5mm jacks for Audio out and Line in              |
+|               |                                                      |
 |               | – Differential MIC                                   |
+|               |                                                      |
 |               | ES8388 audio codec                                   |
 +---------------+------------------------------------------------------+
 | Debugging     | Serial console via 3-pin header                      |
 +---------------+------------------------------------------------------+
 | Connectivity  | – Gigabit Ethernet. RTL8211E-VB-CG controller        |
+|               |                                                      |
 |               | – Optional 802.11b/g/n and Bluetooth4.0              |
+|               |                                                      |
 |               | – Optional 4G Module (Built-in GPS) and SIM card slot|
+|               |                                                      |
 |               | – Optional GPS model via SATES (HK) ST-91-U7         |
 +---------------+------------------------------------------------------+
 | Expansion     | 1x 40-pin header for GPIOs, ADC, I2C, etc.           |
