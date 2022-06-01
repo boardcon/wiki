@@ -31,47 +31,37 @@ Quad-Core Cortex-A17, up to 1.8GHz
 
 Mali-T764 GPU, Supports AFBC (ARM Frame Buffer Compression)
 
--  Support OpenGL ES 1.1/2.0/3.1, OpenCL, DirectX9.3
-
--  High performance dedicated 2D processor
+ - Support OpenGL ES 1.1/2.0/3.1, OpenCL, DirectX9.3
+ - High performance dedicated 2D processor
 
 -  Multi-image
 
 4K 10bits H265/H264 video decoders
 
--  1080P other video decoders (VC-1, MPEG-1/2/4, VP8)
-
--  1080P video encoder for H.264 and VP8
-
--  Video post processor: de-interlace, de-noise, enhancement for
+ - 1080P other video decoders (VC-1, MPEG-1/2/4, VP8)
+ - 1080P video encoder for H.264 and VP8
+ - Video post processor: de-interlace, de-noise, enhancement for
    edge/detail/color
 
 -  Display
 
-Support RGB/Dual LVDS/Dual MIPI-DSI/eDP interface, up to 3840*2160
-resolution
-
+Support RGB/Dual LVDS/Dual MIPI-DSI/eDP interface, up to 3840*2160 resolution
 HDMI 2.0 for 4K@60Hz with HDCP 1.4/2.2
 
 -  Security
-
--  ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
+ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 
 -  Memory
 
--  Dual-channel 64bit DDR3-1333/DDR3L-1333/LPDDR2-1066
-
--  Support MLC NAND, eMMC 4.51
-
+ - Dual-channel 64bit DDR3-1333/DDR3L-1333/LPDDR2-1066
+ - Support MLC NAND, eMMC 4.51
+ 
 -  Connectivity
 
--  Embedded 13M ISP, MIPI CSI-2 and DVP interface
-
--  Dual SDIO 3.0 interface
-
--  TS in/CSA2.0, support DTV function
-
--  Embed HDMI, Ethernet MAC, S/PDIF, USB, I2C, I2S, UART, SPI, PS2
+ - Embedded 13M ISP, MIPI CSI-2 and DVP interface
+ - Dual SDIO 3.0 interface
+ - TS in/CSA2.0, support DTV function
+ - Embed HDMI, Ethernet MAC, S/PDIF, USB, I2C, I2S, UART, SPI, PS2
 
 1.3 EM3288 Specifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,8 +95,7 @@ HDMI 2.0 for 4K@60Hz with HDCP 1.4/2.2
 |               | – 40-pin header for LVDS (multiplexed with VGA)      |
 |               |                                                      |
 |               | | – VGA                                              |
-|               | | – 40-pin FPC connector for TTL LCD                 |
-|               |                                                      |
+|               | | – 40-pin FPC connector for TTL LCD                 |                                          |
 |               | – 26-pin header for MIPI Camera                      |
 +---------------+------------------------------------------------------+
 | Audio I/O     | – HDMI                                               |
@@ -123,9 +112,8 @@ HDMI 2.0 for 4K@60Hz with HDCP 1.4/2.2
 |               |                                                      |
 |               | – Optional 802.11b/g/n and Bluetooth4.0              |
 |               |                                                      |
-|               | | – Optional 4G Module (Built-in GPS) and SIM card   |
-|               |   slot                                               |
-|               | | – Optional GPS model via SATES (HK) ST-91-U7       |
+|               | – Optional 4G Module (Built-in GPS) and SIM card slot|
+|               | – Optional GPS model via SATES (HK) ST-91-U7         |
 +---------------+------------------------------------------------------+
 | Expansion     | 1x 40-pin header for GPIOs, ADC, I2C, etc.           |
 | Headers       |                                                      |
@@ -1390,6 +1378,7 @@ disk, not desktop hard disk.
 -  Support SATA II Asynchronous Signal Recovery (Hot Plug) feature
 
 .. image:: image/29-SATA.gif
+  :alihn: center
 
 +---+-------------+---------------+---+--------------+--------------+
 | SATA Connector (J14)                                              |
