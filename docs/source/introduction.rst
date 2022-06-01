@@ -16,7 +16,7 @@ This document is based on EM3288 V7(MINI3288 version: V4).
   Directx11, and can 4Kx2K achieve 4kx2k H.264 and 10 bits of H.265
   video decoding, 500% performance boost over Mali-400. On display
   aspects, RK3288 supports up to 18Gbps Data transmission rate and
-  4Kx2K@60Hz Video resolution.
+  4Kx2K @60Hz Video resolution.
   
 1.2 Rockchip RK3288 Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
