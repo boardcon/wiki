@@ -69,7 +69,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 .. image:: image/EM3288-SBC-V7.jpg
 
 +---------------+------------------------------------------------------+
-| **Feature**   | **Specifications**                                   |
+|   Feature     |   Specifications                                     |
 +===============+======================================================+
 | CPU           | · Rockchip RK3288, Quad Core Cortex-A17 @ 1.8GHz     |
 |               | · 28nm HKMG process                                  |
@@ -422,7 +422,7 @@ is designed to work with USB host as a high-speed hub.
 .. image:: image/9-USB-AF.gif
 
 +---+---------+--------------------+---+--------+--------------------+
-| S |         |                    |   |        |                    |
+| Single Host (P2)                                                   |
 | i |         |                    |   |        |                    |
 | n |         |                    |   |        |                    |
 | g |         |                    |   |        |                    |
@@ -455,7 +455,7 @@ is designed to work with USB host as a high-speed hub.
 .. image:: image/10-2xUSB-AF.gif
 
 +---+-------------+---------------+---+--------------+--------------+
-| D |             |               |   |              |              |
+| Dual-USB Host (P3)                                                |
 | o |             |               |   |              |              |
 | u |             |               |   |              |              |
 | b |             |               |   |              |              |
@@ -624,7 +624,7 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 .. image:: image/14-Audio.gif
 
 +---+------+----------------------+---+------+----------------------+
-| L |      |                      |   |      |                      |
+| Line in (J6)                                                      |
 | i |      |                      |   |      |                      |
 | n |      |                      |   |      |                      |
 | e |      |                      |   |      |                      |
@@ -645,7 +645,7 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 +---+------+----------------------+---+------+----------------------+
 | 5 | LIN2 | Left Channel input   |   |      |                      |
 +---+------+----------------------+---+------+----------------------+
-| A |      |                      |   |      |                      |
+| Audio out (J7)                                                    |
 | u |      |                      |   |      |                      |
 | d |      |                      |   |      |                      |
 | i |      |                      |   |      |                      |
@@ -678,7 +678,7 @@ recording.
 .. image:: image/15-MIC.gif
 
 +---+-------------+---------------+---+--------------+--------------+
-| M |             |               |   |              |              |
+| MIC1                                                              |
 | I |             |               |   |              |              |
 | C |             |               |   |              |              |
 | 1 |             |               |   |              |              |
@@ -693,8 +693,7 @@ recording.
 
 .. Note::
 
-   1. The audio default output from HDMI. No sound in headphone if not
-   remove HDMI.
+   1. The audio default output from HDMI. No sound in headphone if not remove HDMI.
 
    2. Default recording via MIC1 if the Line_in jack is not plugged in.
 
@@ -1378,7 +1377,7 @@ disk, not desktop hard disk.
 -  Support SATA II Asynchronous Signal Recovery (Hot Plug) feature
 
 .. image:: image/29-SATA.gif
-  :alihn: center
+  :align: center
 
 +---+-------------+---------------+---+--------------+--------------+
 | SATA Connector (J14)                                              |
