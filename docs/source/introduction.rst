@@ -95,7 +95,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 |               | – 40-pin header for LVDS (multiplexed with VGA)      |
 |               |                                                      |
 |               | | – VGA                                              |
-|               | | – 40-pin FPC connector for TTL LCD                 |                                          |
+|               | | – 40-pin FPC connector for TTL LCD                 |                                          
 |               | – 26-pin header for MIPI Camera                      |
 +---------------+------------------------------------------------------+
 | Audio I/O     | – HDMI                                               |
@@ -423,20 +423,6 @@ is designed to work with USB host as a high-speed hub.
 
 +---+---------+--------------------+---+--------+--------------------+
 | Single Host (P2)                                                   |
-| i |         |                    |   |        |                    |
-| n |         |                    |   |        |                    |
-| g |         |                    |   |        |                    |
-| l |         |                    |   |        |                    |
-| e |         |                    |   |        |                    |
-| - |         |                    |   |        |                    |
-| H |         |                    |   |        |                    |
-| o |         |                    |   |        |                    |
-| s |         |                    |   |        |                    |
-| t |         |                    |   |        |                    |
-| ( |         |                    |   |        |                    |
-| P |         |                    |   |        |                    |
-| 2 |         |                    |   |        |                    |
-| ) |         |                    |   |        |                    |
 +---+---------+--------------------+---+--------+--------------------+
 | P | Signal  | Description        | P | Signal | Description        |
 | i |         |                    | i |        |                    |
@@ -456,20 +442,6 @@ is designed to work with USB host as a high-speed hub.
 
 +---+-------------+---------------+---+--------------+--------------+
 | Dual-USB Host (P3)                                                |
-| o |             |               |   |              |              |
-| u |             |               |   |              |              |
-| b |             |               |   |              |              |
-| l |             |               |   |              |              |
-| e |             |               |   |              |              |
-| - |             |               |   |              |              |
-| H |             |               |   |              |              |
-| o |             |               |   |              |              |
-| s |             |               |   |              |              |
-| t |             |               |   |              |              |
-| ( |             |               |   |              |              |
-| P |             |               |   |              |              |
-| 3 |             |               |   |              |              |
-| ) |             |               |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
 | i |             |               | i |              |              |
@@ -625,15 +597,6 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 
 +---+------+----------------------+---+------+----------------------+
 | Line in (J6)                                                      |
-| i |      |                      |   |      |                      |
-| n |      |                      |   |      |                      |
-| e |      |                      |   |      |                      |
-| i |      |                      |   |      |                      |
-| n |      |                      |   |      |                      |
-| ( |      |                      |   |      |                      |
-| J |      |                      |   |      |                      |
-| 6 |      |                      |   |      |                      |
-| ) |      |                      |   |      |                      |
 +---+------+----------------------+---+------+----------------------+
 | P | Si   | Description          | P | Si   | Description          |
 | i | gnal |                      | i | gnal |                      |
@@ -646,17 +609,6 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 | 5 | LIN2 | Left Channel input   |   |      |                      |
 +---+------+----------------------+---+------+----------------------+
 | Audio out (J7)                                                    |
-| u |      |                      |   |      |                      |
-| d |      |                      |   |      |                      |
-| i |      |                      |   |      |                      |
-| o |      |                      |   |      |                      |
-| o |      |                      |   |      |                      |
-| u |      |                      |   |      |                      |
-| t |      |                      |   |      |                      |
-| ( |      |                      |   |      |                      |
-| J |      |                      |   |      |                      |
-| 7 |      |                      |   |      |                      |
-| ) |      |                      |   |      |                      |
 +---+------+----------------------+---+------+----------------------+
 | P | Si   | Description          | P | Si   | Description          |
 | i | gnal |                      | i | gnal |                      |
@@ -679,9 +631,6 @@ recording.
 
 +---+-------------+---------------+---+--------------+--------------+
 | MIC1                                                              |
-| I |             |               |   |              |              |
-| C |             |               |   |              |              |
-| 1 |             |               |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
 | i |             |               | i |              |              |
@@ -1107,16 +1056,7 @@ input / output.
 .. image:: image/23-EM3288_GPIO.gif
 
 +---+-------------+---------------+---+--------------+--------------+
-| G |             |               |   |              |              |
-| P |             |               |   |              |              |
-| I |             |               |   |              |              |
-| O |             |               |   |              |              |
-| ( |             |               |   |              |              |
-| C |             |               |   |              |              |
-| O |             |               |   |              |              |
-| N |             |               |   |              |              |
-| 4 |             |               |   |              |              |
-| ) |             |               |   |              |              |
+| GPIO (CON4)                                                       |
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
 | i |             |               | i |              |              |
@@ -1277,23 +1217,7 @@ networks.
 .. image:: image/27-4G.gif
 
 +---+-----------+---+------------+---+------------+---+--------------+
-| 4 |           |   |            |   |            |   |              |
-| G |           |   |            |   |            |   |              |
-| c |           |   |            |   |            |   |              |
-| o |           |   |            |   |            |   |              |
-| n |           |   |            |   |            |   |              |
-| n |           |   |            |   |            |   |              |
-| e |           |   |            |   |            |   |              |
-| c |           |   |            |   |            |   |              |
-| t |           |   |            |   |            |   |              |
-| o |           |   |            |   |            |   |              |
-| r |           |   |            |   |            |   |              |
-| ( |           |   |            |   |            |   |              |
-| C |           |   |            |   |            |   |              |
-| O |           |   |            |   |            |   |              |
-| N |           |   |            |   |            |   |              |
-| 2 |           |   |            |   |            |   |              |
-| ) |           |   |            |   |            |   |              |
+| 4G Connector (CON2)                                                |
 +---+-----------+---+------------+---+------------+---+--------------+
 | P | Signal    | P | Signal     | P | Signal     | P | Signal       |
 | i |           | i |            | i |            | i |              |
@@ -1413,6 +1337,7 @@ disk, not desktop hard disk.
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/31-RTC.gif
+   :align: center
 
 The backup battery (3V) is used to ensure the RTC (frequency 32.768KHz)
 is still able to work after power off. Lithium cell model: CR1220.
