@@ -11,7 +11,6 @@ EM3288 user manual
    :caption: Hardware
 
    introduction
-   peripherals
    configuration
    
 .. toctree::
