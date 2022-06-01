@@ -71,9 +71,11 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 |   Feature     |   Specifications                                     |
 +===============+======================================================+
 | CPU           | · Rockchip RK3288, Quad Core Cortex-A17 @ 1.8GHz     |
+|               |                                                      |
 |               | · 28nm HKMG process                                  |
 +---------------+------------------------------------------------------+
 | GPU           | · ARM Mali-T764 GPU, with TE, ASTC, AFBC technology  |
+|               |                                                      |
 |               | · Support OpenGL ES1.1/2.0/3.0, OpenVG1.1, OpenCL,   |
 |               | DirectX11                                            |
 +---------------+------------------------------------------------------+
@@ -93,8 +95,9 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 |               |                                                      |
 |               | – 40-pin header for LVDS (multiplexed with VGA)      |
 |               |                                                      |
-|               | | – VGA                                              |
-|               | | – 40-pin FPC connector for TTL LCD                 | 
+|               | – VGA                                                |
+|               |                                                      |
+|               | – 40-pin FPC connector for TTL LCD                   | 
 |               |                                                      |
 |               | – 26-pin header for MIPI Camera                      |
 +---------------+------------------------------------------------------+
