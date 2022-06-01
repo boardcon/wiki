@@ -67,7 +67,8 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/EM3288-SBC-V7.jpg
-
+    :align: center
+    
 +---------------+------------------------------------------------------+
 |   Feature     |   Specifications                                     |
 +===============+======================================================+
@@ -127,18 +128,21 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/2-EM3288_PCB_dimension.png
-
+    :align: center
+    
 1.5 Block Diagram
 ^^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/3-EM3288_Block_diagram.png
-
+    :align: center
+    
 1.6 CPU Introduction 
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/image5.jpeg
    :alt: arm-MINI3288
-
+    :align: center
+    
 **Board Dimension**
 
 | \* Board size: 70mm x 58mm
@@ -147,7 +151,8 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | \* Layer: 8 Layers, complying with EMS/EMI
 
 .. image:: image/image6.png
- 
+     :align: center
+    
 **Pin Definition**
 
 +---+-----------+----+-------------+----+-----------+----+----------+
@@ -319,7 +324,8 @@ EM3288 Power Supply – 5V DC power supply or external Li+ battery
 -  **5V/3A DC power supply (P6)**
 
 .. image:: image/6-DC.gif
-
+    :align: center
+    
 +---+--------+---------------------------+---+--------+--------------+
 | P | Signal | Description               | P | Signal | Description  |
 | i |        |                           | i |        |              |
@@ -337,7 +343,8 @@ EM3288 provides an external Li-battery interface. **It is a Reserved
 interface that function not supported currently.**
 
 .. image:: image/7-DC-SATA.gif
-
+    :align: center
+    
 +---+--------+----------------+---+------+---------------------------+
 | P | Signal | Description    | P | Si   | Description               |
 | i |        |                | i | gnal |                           |
@@ -350,7 +357,8 @@ interface that function not supported currently.**
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/8-Ethernet.gif
-
+    :align: center
+    
 RK3288 has integrated Gigabit Ethernet MAC. EM3288 adopts RTL8211E as
 the Ethernet chip. RJ45 connector
 
@@ -420,7 +428,8 @@ is designed to work with USB host as a high-speed hub.
 -  Support periodic out channel in host mode
 
 .. image:: image/9-USB-AF.gif
-
+    :align: center
+    
 +---+---------+--------------------+---+--------+--------------------+
 | Single Host (P2)                                                   |
 +---+---------+--------------------+---+--------+--------------------+
@@ -439,7 +448,8 @@ is designed to work with USB host as a high-speed hub.
 +---+---------+--------------------+---+--------+--------------------+
 
 .. image:: image/10-2xUSB-AF.gif
-
+    :align: center
+    
 +---+-------------+---------------+---+--------------+--------------+
 | Dual-USB Host (P3)                                                |
 +---+-------------+---------------+---+--------------+--------------+
@@ -484,7 +494,8 @@ transfer file.
    host negotiation protocol.
 
 .. image:: image/11-Micro_USB.gif
-
+    :align: center
+    
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
 | i |             |               | i |              |              |
@@ -507,7 +518,8 @@ accessible through the carrier board interface. It does not support
 hot-plug.
 
 .. image:: image/12-Micro_SD.gif
-
+    :align: center
+    
 +---+------------+-----------------+---+--------------+--------------+
 | P | Signal     | Description     | P | Signal       | Description  |
 | i |            |                 | i |              |              |
@@ -534,7 +546,8 @@ HDMI/LCD audio and video synchronization output. The HDMI interface is
 the regular 19pins HDMI type A, with width 13.9mm and thickness 4.45mm.
 
 .. image:: image/13-HDMI.gif
-
+    :align: center
+    
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
 | i |             |               | i |              |              |
@@ -594,7 +607,8 @@ The EM3288 adopts audio codec ES8388, provides stereo audio output
 -  Stereo output, support recording
 
 .. image:: image/14-Audio.gif
-
+    :align: center
+    
 +---+------+----------------------+---+------+----------------------+
 | Line in (J6)                                                      |
 +---+------+----------------------+---+------+----------------------+
@@ -628,7 +642,8 @@ The Microphone MIC1 model is WM_64BC MIC/F6/DIP. It is used for
 recording.
 
 .. image:: image/15-MIC.gif
-
+    :align: center
+    
 +---+-------------+---------------+---+--------------+--------------+
 | MIC1                                                              |
 +---+-------------+---------------+---+--------------+--------------+
@@ -643,7 +658,6 @@ recording.
 .. Note::
 
    1. The audio default output from HDMI. No sound in headphone if not remove HDMI.
-
    2. Default recording via MIC1 if the Line_in jack is not plugged in.
 
 2.8 VGA (J20)
@@ -653,7 +667,8 @@ EM3288 adopts standard 15-pin female VGA connector, and SDA7123
 3-Channel 10 Digit Video D/A converter.
 
 .. image:: image/16-VGA.gif
-
+    :align: center
+    
 +---+------------+----------------+---+--------------+--------------+
 | P | Signal     | Description    | P | Signal       | Description  |
 | i |            |                | i |              |              |
@@ -701,7 +716,8 @@ resolution.
 -  Support MSB mode and LSB mode data transfer
 
 .. image:: image/17-LVDS.gif
-
+    :align: center
+    
 +---+-----------+---+------------+---+------------+---+-------------+
 | P | Signal    | P | Signal     | P | Signal     | P | Signal      |
 | i |           | i |            | i |            | i |             |
@@ -742,7 +758,8 @@ resolution.
 J21 is a 40-pin FPC connector for TTL LCD.
 
 .. image:: image/18-FPC.gif
-
+    :align: center
+    
 +---+-----------+---+------------+---+------------+---+-------------+
 | P | Signal    | P | Signal     | P | Signal     | P | Signal      |
 | i |           | i |            | i |            | i |             |
@@ -796,7 +813,8 @@ EM3288 supports MIPI Camera.
 -  Lane operation ranging from 80 Mbps to 1.5Gbps in forward direction.
 
 .. image:: image/19-mipi-Camera.gif
-
+    :align: center
+    
 +---+-----------+------------------+---+-----------+-----------------+
 | P | Signal    | Description      | P | Signal    | Description     |
 | i |           |                  | i |           |                 |
@@ -846,7 +864,8 @@ EM3288 supports MIPI Camera.
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/20-GPS.gif
-
+    :align: center
+    
 The GPS module (Model: ST-91-U7) uses ublox 7 chipset which is high
 performance u-blox 7 multi-GNSS (GPS, GLONASS, QZSS, SBAS – Galileo and
 Compass ready) position engine delivers exceptional sensitivity and
@@ -915,7 +934,8 @@ acquisition times.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/21-wifi.gif
-
+    :align: center
+    
 AP6236 is a low-power consumption module which has incorporated Wi-Fi
 and Bluetooth into one chip. The module complies with IEEE 802.11 b/g/n
 standard and it could achieve up to a speed of 72.2Mbps with single
@@ -1032,7 +1052,8 @@ Features
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/22-Debug.gif
-
+    :align: center
+    
 The debug serial port (UART2) is used to connect PC and board with the
 USB-to-serial cable (CP2102).
 
@@ -1054,7 +1075,8 @@ The GPIO is a 40-pin header connector. The pins can be defined as data
 input / output.
 
 .. image:: image/23-EM3288_GPIO.gif
-
+    :align: center
+    
 +---+-------------+---------------+---+--------------+--------------+
 | GPIO (CON4)                                                       |
 +---+-------------+---------------+---+--------------+--------------+
@@ -1150,7 +1172,8 @@ input / output.
 The Pin6 of J2 is IR_IN. The EM3288 supports IR data receiver. The
 signals are transmitted directly to the CPU.
 
-.. image:: image/24-Control.gif
+.. image:: image/24-Control.gif   
+  :align: center
 
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
@@ -1171,6 +1194,7 @@ signals are transmitted directly to the CPU.
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/25-button.gif
+   :align: center
 
 Short press K1 is sleep/wake up and long press is reboot.
 
@@ -1262,6 +1286,8 @@ networks.
 +---+-----------+---+------------+---+------------+---+--------------+
 
 .. image:: image/28-SIM.gif
+   :align: center
+
 
 P4 is an auto pop-up SIM card slot which is compatible to the standard
 SIM Card and can be used for wireless transmission with a 3G/4G module.
