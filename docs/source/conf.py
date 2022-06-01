@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'SBC User Manual'
-copyright = '2022, Boardcon Embedded Design'
+copyright = '2021, Boardcon Embedded Design'
 author = 'Boardcon'
 
 release = '1.0'
@@ -31,6 +31,12 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 html_theme = 'sphinx_rtd_theme'
+
+# -- in the html_theme_options
+
+html_theme_options = {
+    'copyright_year': datetime.utcnow().year
+}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
