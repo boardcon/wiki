@@ -14,7 +14,7 @@ Product Configuration
 | 2  | TF Card      | 1    | Android BSP, Ubuntu BSP, Documents,      |
 |    |              |      | tools, Schematic Drawing, Datasheets     |
 +----+--------------+------+------------------------------------------+
-| 3  | Ethernet     | 1    |                                          |
+| 3  | Ethernet     | 1    |  1.5m Ethernet crossover cable           |
 |    | cable        |      |                                          |
 +----+--------------+------+------------------------------------------+
 | 4  | Serial Cable | 1    | CP2102                                   |
