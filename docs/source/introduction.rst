@@ -142,9 +142,9 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 **Pin Definition**
 
 +---+-----------+----+-------------+----+-----------+----+----------+
+| J1                               | J2                             |
++---+-----------+----+-------------+----+-----------+----+----------+
 |Pin| Signal    | Pin| Signal      | Pin| Signal    | Pin| Signal   |
-|(J |           | (J |             | (J |           | (J |          |
-| 1)|           | 1) |             | 2) |           | 2) |          |
 +===+===========+====+=============+====+===========+====+==========+
 | 1 | TX_C      | 51 | MIP         | 1  | VCC_SYS   | 51 | SPI0_U   |
 |   |           |    | I_TX/RX_D2P |    |           |    | ART4_RXD |
@@ -204,7 +204,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 | 25|LCD_D5_LD2N| 75 | CIF_CLKIN   | 25 |WIFI_REG_ON| 75 | I2S_SDI  |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 26|LCD_D6_LD3P| 76 | I2C3_SCL    | 26 |BT_HOS     | 76 | I2S_MCLK |
-|   |           |    |             |    | T_WAKE    |    |          |
+|   |           |    |             |    |T_WAKE     |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 27|LCD_D7_LD3N| 77 | I2C3_SDA    | 27 | WIFI_H    | 77 | I2S_SCLK |
 |   |           |    |             |    | OST_WAKE  |    |          |
@@ -255,7 +255,7 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 |   | _LCK1P    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 43| LCD_D23   | 93 | VCC_CAM     | 43 | HOST1_DM  | 93 | UART3_RX |
-|   |    _LCK1N |    |             |    |           |    |          |
+|   | _LCK1N    |    |             |    |           |    |          |
 +---+-----------+----+-------------+----+-----------+----+----------+
 | 44| GND       | 94 | VCCA_33     | 44 | OTG_DET   | 94 | UART2_TX |
 +---+-----------+----+-------------+----+-----------+----+----------+
@@ -933,8 +933,8 @@ input/output.
 |   |             | data7         |   |              | data/ TSI    |
 |   |             |               |   |              | data6        |
 +---+-------------+---------------+---+--------------+--------------+
-| 7 | UART1_      | UART1 clear   | 8 | TS0_SYNC     | TSI          |
-|   | CTSn/TS0_D2 | to send/ TSI  |   |              | synchronizer |
+| 7 | UART1_C     | UART1 clear   | 8 | TS0_SYNC     | TSI          |
+|   | TSn/TS0_D2  | to send/ TSI  |   |              | synchronizer |
 |   |             | data2         |   |              | signal       |
 +---+-------------+---------------+---+--------------+--------------+
 | 9 | UART        | UART1         | 10| UART1        | UART1        |
@@ -998,7 +998,7 @@ input/output.
 | 39| VCC5V       | 5V            | 40| VCC5V        | 5V           |
 +---+-------------+---------------+---+--------------+--------------+
 
-2.15 Control (J2)
+2.16 Control (J2)
 ^^^^^^^^^^^^^^^^^^^
 
 The Pin6 of J2 is IR_IN. The EM3288 supports IR data receiver. The
@@ -1019,7 +1019,7 @@ signals are transmitted directly to the CPU.
 | 7 | WORK_LED    | Work LED      | 8 | PWR_LED      | Power LED    |
 +---+-------------+---------------+---+--------------+--------------+
 
-2.16 Buttons (K1, K2)
+2.17 Buttons (K1, K2)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/25-button.gif
@@ -1032,12 +1032,11 @@ The K2 is used for download combined with OTG
 +---+---------+-------------------+-----+------------+--------------+
 |Key| Signal  | Description       | Key | Signal     | Description  |
 +---+---------+-------------------+-----+------------+--------------+
-| K1| PWR-KEY |Short: Sleep/Wake  | K2  | RECOVER    | Download     |
-|   |         | up                |     |            | mode         |
-|   |         |Long: Reboot       |     |            |              |
+| K1| PWR-KEY |Short: Sleep/WakeUp| K2  | RECOVER    | Download     |
+|   |         |Long: Reboot       |     |            | mode         |
 +---+---------+-------------------+-----+------------+--------------+
 
-2.17 4G (CON2)
+2.18 4G (CON2)
 ^^^^^^^^^^^^^^^^^^^
 
 EM3288 adopts the standard PCI Express MiniCard form factor (MiniPCIe)
@@ -1063,7 +1062,7 @@ networks.
 +---+-----------+---+------------+---+------------+---+--------------+
 | 4G Connector (CON2)                                                |
 +---+-----------+---+------------+---+------------+---+--------------+
-|Pin| Signal    | P | Signal     |Pin| Signal     | P | Signal       |
+|Pin| Signal    |Pin| Signal     |Pin| Signal     |Pin| Signal       |
 +---+-----------+---+------------+---+------------+---+--------------+
 | 1 | NC        | 2 | 3GVCC      | 3 | NC         | 4 | GND          |
 +---+-----------+---+------------+---+------------+---+--------------+
@@ -1116,7 +1115,7 @@ SIM Card and can be used for wireless transmission with a 3G/4G module.
 | 9 | GND      | Ground          |                                   |
 +---+----------+-----------------+---+---------+---------------------+
 
-2.18 SATA & SATA_Power (J14, J18)
+2.19 SATA & SATA_Power (J14, J18)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 On-board 7-pin SATA Interface, equipped with a HS USB to SATA bridge
@@ -1158,7 +1157,7 @@ disk, not desktop hard disk.
 | 1 | SATA_5V     |SATA power.DC5V| 2 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
 
-2.19 RTC (BT1)
+2.20 RTC (BT1)
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: image/31-RTC.gif
