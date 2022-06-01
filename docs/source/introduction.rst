@@ -1,10 +1,10 @@
-Introduction
-==============
+Hardware Introduction
+=======================
 
 This document is based on EM3288 V7(MINI3288 version: V4).
 
-1 EM3288 Introduction
--------------------
+1 Introduction
+---------------
 
 1.1 Summary
 ^^^^^^^^^^^^
@@ -292,8 +292,8 @@ ARM TrustZone (TEE), Secure Video Path, Cipher Engine, Secure boot
 |   | _D1N      | 00 |             |    |           | 00 | IO7_C5_D |
 +---+-----------+----+-------------+----+-----------+----+----------+
 
-2 Peripherals Introduction
----------------------------
+2 Peripherals 
+--------------
 
 2.1 Power (P6, J17)
 ^^^^^^^^^^^^^^^^^^^
