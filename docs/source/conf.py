@@ -32,11 +32,6 @@ templates_path = ['_templates']
 # -- Options for HTML output
 html_theme = 'sphinx_rtd_theme'
 
-# -- in the html_theme_options
-
-html_theme_options = {
-    'copyright_year': datetime.utcnow().year
-}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
